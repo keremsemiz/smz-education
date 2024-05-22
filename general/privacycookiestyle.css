@@ -1,0 +1,153 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    outline: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+:root{
+    --color-primary: #353B80;
+    --color-success: #00bf8e;
+    --color-warnings: #f7c94b;
+    --color-danger:   #A85187;
+    --color-danger-varient: rgba(247, 88, 66, 0.4);
+    --color-white: #fff;
+    --color-light: rgba(255, 255, 255, 0.7);
+    --color-black: #000;
+    --color-bg: #011D3B;
+    --color-bg1: #02102B;
+    --color-bg2: #031B39;
+
+    --container-width-lg: 80%;
+    --container-width-md: 90%;
+    --container-width-sm: 94%;
+
+    --transition: all 400ms ease;
+}
+body{
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.7;
+    color: var(--color-white);
+    background: var(--color-bg);
+}
+.container{
+    width: var(--container-width-lg);
+    margin: 0 auto;
+}
+section{
+    padding: 6rem 0;
+}
+section h2{
+    text-align: center;
+    margin-bottom: 4rem;
+}
+h1, h2 ,h3, h4, h5{
+    line-height: 1.2;
+}
+h1{
+    font-size: 2.4rem;
+}
+h2{
+    font-size: 2rem;
+}
+h3{
+    font-size: 1.6rem;
+}
+h4{
+    font-size: 1.3rem;
+}
+a{
+    color: var(--color-white);
+}
+img{
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+.btn{
+    display: inline-block;
+    background: var(--color-white);
+    color: var(--color-black);
+    padding: 1rem 2rem;
+    border: 1px solid transparent;
+    font-weight: 500;
+    transition: var(--transition);
+    border-radius: 1.2rem;
+}
+.btn :hover{
+    background: transparent;
+    color: var(--color-white);
+    border-color: var(--color-white);
+}
+.btn-primary{
+    background: var(--color-danger);
+    color: var(--color-white);
+    transition: var(--transition);
+}
+header{
+    height: 85vh;
+}
+.header__right-img{
+    max-width: 80%;
+    max-height: 80%;
+}
+.privacypolicy{
+    margin-left: 10rem;
+    margin-right: 10rem;
+}
+.privacypolicy__last{
+    margin-top: 5rem;
+    text-align: center;
+}
+
+/*******************************MEDIA QUERY TABLETS***************************/
+@media screen and (max-width: 1024px) {
+    .container, .header__right-img, .privacypolicy {
+        width: var(--container-width-md);
+        margin-left: 1rem; /* Slightly smaller margins for medium screens */
+        margin-right: 1rem;
+    }
+    .header__right-img, .privacypolicy {
+        max-width: 90%; /* Adjust the width for medium screens */
+        margin: 0 auto; /* Center the content */
+    }
+
+    .nav__menu {
+        display: none; /* Hide the menu for mobile and tablet view */
+    }
+
+    #open-menu-btn {
+        display: block; /* Show menu button for mobile and tablet view */
+    }
+
+    /* Other necessary adjustments for tablet view */
+}
+
+/*******************************MEDIA QUERY MOBILE DEVICES***************************/
+@media screen and (max-width: 768px) {
+    .container, .header__right-img, .privacypolicy {
+        width: var(--container-width-sm);
+        text-align: center;
+    }
+
+    .header__right-img, .privacypolicy {
+        max-width: 100%; /* Use full width for small screens */
+        margin: 0; /* Reset margin */
+    }
+
+    .cookie__popup {
+        padding: 1rem; /* Adjust padding for smaller screens */
+    }
+
+    /* Adjust font sizes, button sizes, and other elements for better readability and touch interaction */
+    h1, h2, h3, h4, p{
+        font-size: 120%
+    }
+
+    .btn, .btn-primary {
+        padding: 0.8rem 1.6rem; /* Smaller buttons for smaller screens */
+    }
+
+    /* Any other responsive adjustments */
+}
