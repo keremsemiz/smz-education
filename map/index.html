@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects Map - SMZ Education</title>
+    <link rel="stylesheet" href="/general/style.css">
+    <link rel="stylesheet" href="map.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <style>
+        #map { height: 1920px; }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+
+    <script>
+        var latitudeInitial = -25.024563;
+        var longitudeInitial = 5.228399;
+        var initialZoom = 4;
+
+        var schools = [
+            { name: "École Bilingue Shiloh Académie", location: [14.28170, -17.0339026], imageUrl: "/images/SMZ_LOGO__3_-removebg-preview.png" },
+            { name: "École EVA Dakar", location: [14.669508, -17.431205],  imageUrl: "/images/SMZ_LOGO__3_-removebg-preview.png" },
+            { name: "Palmarès School", location: [37.267057, 9.862252],  imageUrl: "/images/SMZ_LOGO__3_-removebg-preview.png" },
+            { name: "V.H Public School", location: [2.240552, 32.897432],  imageUrl: "/images/SMZ_LOGO__3_-removebg-preview.png" }
+        ];
+
+        var map = L.map('map').setView([latitudeInitial, longitudeInitial], initialZoom);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: 'Map data &copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+
+    </script>
+</body>
+</html>
