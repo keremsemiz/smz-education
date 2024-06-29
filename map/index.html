@@ -11,10 +11,37 @@
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <style>
         #map { height: 1920px; }
+
+        .custom-icon {
+            background-color: #011D3B; /* Change this to your desired background color */
+            border: 2px solid #ffffff;
+            background-image: '/images/SMZ_LOGO__3_-removebg-preview.png';
+            border-radius: 50%;
+            width: 38px;
+            height: 38px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .custom-icon img {
+            width: 80%;
+            height: 80%;
+            border-radius: 50%;
+        }
+
     </style>
 </head>
 <body>
     <div id="map"></div>
+    <div style="position: absolute; bottom: 10px; left: 10px; color: white; z-index: 999; background: #011D3B; padding: 20px 20px; border-radius: 16px; margin-right: 10px;">
+        <h2 style="margin-block-start: 0em; margin-block-end: 0em;">The SMZ Edu Map</h2>
+        <p style="margin-block-start: 0.4em; margin-block-end: 0em;">All the schlools we have worked with and are
+            working with now.
+        </p>
+    </div>
 
     <script>
         var latitudeInitial = -25.024563;
@@ -33,6 +60,20 @@
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: 'Map data &copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
+
+        schools.forEach(function(school) {
+            var customIcon = L.divIcon({
+                className: 'custom-icon',
+                html: '<img src="' + school.imageUrl + '" alt="School Logo">',
+                iconSize: [38, 38],
+                iconAnchor: [19, 19], 
+                popupAnchor: [0, -19] 
+            });
+
+            L.marker(school.location, { icon: customIcon })
+                .bindPopup('<b>' + school.name + '</b>')
+                .addTo(map);
+        });
 
 
     </script>
