@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             var links = document.getElementsByTagName('link');
@@ -75,6 +77,107 @@
                     </article>
                 </div>
             </div>
+            <div class="mapHolder">
+                <div id="map"></div>
+
+                <div style="position: absolute; bottom: 10px; left: 10px; color: white; z-index: 999; background: #011D3B; padding: 20px 20px; border-radius: 16px; margin-right: 10px;">
+                    <h2 style="margin-block-start: 0em; margin-block-end: 0em;">The SMZ Edu Map</h2>
+                    <p style="margin-block-start: 0.4em; margin-block-end: 0em;">All the schlools we have worked with and are
+                        working with now.
+                    </p>
+                </div>
+            
+                <div style="position: absolute; bottom: 10px; right: 10px; color: white; z-index: 999; background: #011D3B; padding: 20px 20px; border-radius: 16px; margin-right: 10px;">
+                    <h2 style="margin-block-start: 0em; margin-block-end: 0em;">Total Schools:</h2>
+                    <p style="margin-block-start: 0.4em; margin-block-end: 0em;">There are <em>4</em>  schools partnered with us
+                    </p>
+                </div>
+            
+            
+                <div style="position: absolute; bottom: 50px; left: 10px; color: white; z-index: 9999; background: #011D3B; padding: 20px 20px; border-radius: 16px; margin-right: 10px;">
+                    <h4 style="margin-block-start: 0em; margin-block-end: 0em;"><a href="/home/"><i id="iconArrow" class="uil-left-arrow-to-left"></i></a></h4>
+                    </p>
+                </div>
+            </div>
+
+        
+            <script>
+                var latitudeInitial = 25.024563;
+                var longitudeInitial = 5.228399;
+                var initialZoom = 4;
+        
+                var schools = [
+                    {   name: "SMZ Education Headquarters",
+                        location: [52.450822, 13.273018],
+                        imageUrl: "/images/SMZ_LOGO__3_-removebg-preview.png",
+                        address: "Saargemünder Straße 30, Berlin",
+                        description: "smzedu.com",
+                        contact: "Phone: +49 15224407028" 
+                    },
+                    {   name: "École Bilingue Shiloh Académie",
+                        location: [14.471422, -16.998958],
+                        imageUrl: "/images/SMZ_LOGO__3_-removebg-preview.png",
+                        address: "F2C2+GCH, Gandigal-Est, Senegal",
+                        description: "shilohacademie.smzedu.com",
+                        contact: "Phone: +221 339355619" 
+                    },
+        
+                    {   name: "École EVA Dakar", 
+                        location: [14.669508, -17.431205], 
+                        imageUrl: "/images/SMZ_LOGO__3_-removebg-preview.png",
+                        address: "93 Rue Amadou Assane Ndoye, Dakar, Senegal",
+                        description: "test.smzedu.com",
+                        contact: "Phone: +221 172658892" 
+                    },
+        
+                    {   name: "Palmarès School", 
+                        location: [37.267057, 9.862252],
+                        imageUrl: "/images/SMZ_LOGO__3_-removebg-preview.png",
+                        address: "7V87+R77, Route de Bizerte, Mateur 7030, Tunisia",
+                        description: "test.smzedu.com",
+                        contact: "Phone: +216 50481387" 
+                    },
+        
+                    {    name: "V.H Public School", 
+                        location: [2.240552, 32.897432],
+                        imageUrl: "/images/SMZ_LOGO__3_-removebg-preview.png",
+                        address: "6VRX+63 Lira, Uganda",
+                        description: "test.smzedu.com",
+                        contact: "Phone: ------------" 
+                    },
+                ];
+        
+                var map = L.map('map').setView([latitudeInitial, longitudeInitial], initialZoom);
+        
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: 'Map data &copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                }).addTo(map);
+        
+                schools.forEach(function(school) {
+                    var customIcon = L.divIcon({
+                        className: 'custom-icon',
+                        html: '<img src="' + school.imageUrl + '" alt="School Logo">',
+                        iconSize: [38, 38],
+                        iconAnchor: [19, 19], 
+                        popupAnchor: [0, -19] 
+                    });
+        
+                    var popupContent = '<div class="popup-content">' +
+                                       '<h3>' + school.name + '</h3>' +
+                                       '<img src="' + school.imageUrl + '" alt="School Logo">' +
+                                       '<p><strong>Address:</strong> ' + school.address + '</p>' +
+                                       '<p>' + school.description + '</p>' +
+                                       '<p><strong>Contact:</strong> ' + school.contact + '</p>' +
+                                       '</div>';
+                                       
+        
+                    L.marker(school.location, { icon: customIcon })
+                        .bindPopup(popupContent)
+                        .addTo(map);
+                });
+        
+        
+            </script>
         </section>
     </main>
     

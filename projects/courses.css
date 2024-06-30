@@ -20,3 +20,32 @@
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
+#map { height: 900px; }
+
+.custom-icon {
+    background-color: #011D3B;
+    border: 2px solid #ffffff;
+    background-image: '/images/SMZ_LOGO__3_-removebg-preview.png';
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+}
+.custom-icon img {
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+}
+#iconArrow{
+    color: white;
+    z-index: 9999;
+    font-size: 2rem;
+}
+.mapHolder{
+    padding-top: 5rem;
+}
