@@ -1,5 +1,6 @@
 # Welcome to SMZ Education 👋
-![SMZ Education Logo](/smzedu.com/SMZEDULOGO.png "SMZ Education Logo")
+![smz edu homepage](https://github.com/user-attachments/assets/377040ab-7013-4bc6-a4c5-40582ff09d6c)
+SMZ Education Website: https://smzedu.com/home/
 
 ## Current Projects
 
