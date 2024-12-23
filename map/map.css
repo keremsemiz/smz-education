@@ -1,9 +1,0 @@
-body{
-    overflow-y: hidden;
-    height: fit-content;
-}
-#iconArrow{
-    color: white;
-    z-index: 9999;
-    font-size: 2rem;
-}

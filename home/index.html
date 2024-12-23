@@ -10,6 +10,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             var links = document.getElementsByTagName('link');
@@ -20,6 +22,10 @@
     </script>
 </head>
 <body>
+    <div class="importantBanner">
+        <h3 class="bannerText">Please donate to SMZ Education to keep our initiative running</h3>
+        <a href="https://gofund.me/dc392551"><button style="cursor: pointer;" class="btn">Donate!</button></a>
+    </div>
     <nav>
         <div class="container nav__container">
             <a href="/home/"><h1>SMZ Education</h1></a>
@@ -27,9 +33,8 @@
                 <li><a href="/home/">Home</a></li>
                 <li><a href="/about/">About</a></li>
                 <li><a href="/projects/">Projects</a></li>
-                <li><a href="/map/">Map</a></li>
                 <li><a href="/contact/">Contact</a></li>
-                <!--<li><a href="https://gofund.me/8dc15ea9">Donate</a></li>--> 
+                <li><a href="https://gofund.me/dc392551">Donate</a></li>
             </ul>
             <button id="open-menu-btn"><i class="uil uil-bars"></i></button>
             <button id="close-menu-btn"><i class="uil uil-multiply"></i></button>
@@ -37,15 +42,19 @@
     </nav>
     <!--end of navbar--> 
 
-    <!--cookie popup--> 
-    <div class="cookie__popup">
-        <div class="cookie__text">
-            <h2>We use Cookies!</h2>
-            <p>Cookies are only used to track website visits and we do not gather any data from you.</p>
-            <a class="btn cookie__button" href="/privacy/">Privacy Policy</a>
-            <a class="btn btn-primary cookie__button" href="/home/" id="acceptCookies">I understand</a>
+    <!--donation popup--> 
+    <div class="overlay"></div>
+    <div class="donation__popup">
+        <a class="close-btn" href="#">X</a>
+        <h2 style="text-align: center;">Your donation matters.</h2>
+        <p style="text-align: center;">Please click for more information.</p>
+        <a href="https://gofund.me/d8dfcdac"><img src="/images/Orange Colorful Shapes and Scribbles Medical Needs GoFundMe Story Image.png" alt=""></a>
+        <div class="gfm-embed"
+            data-url="https://www.gofundme.com/f/help-continue-our-mission-helping-underdeveloped-schools/widget/medium?sharesheet=manage hero&attribution_id=sl:49abbbef-e426-4aae-b7eb-4fad0b488421">
         </div>
+        <script defer src="https://www.gofundme.com/static/js/embed.js"></script>
     </div>
+
     
     <header>
         <div class="container header__container">
@@ -100,48 +109,75 @@
     <section class="courses">
         <h2>Recent News & Expansions</h2>
         <div class="container courses__container">
-            <div class="course" data-tilt data-tilt-glare>
+            <div class="course" data-tilt data-tilt-glare> 
+                    <div style="text-align: center;" class="course__header">
+                        <span class="course__date">15/12/2024</span>
+                        <span class="course__author">Kerem Semiz</span>
+                    </div>
                 <article>
                     <div class="course__image">
-                        <img src="/images/senegalecole.jpg" alt="Shiloh Académie">
+                        <img style="height: 16rem;" src="https://scontent-sof1-2.xx.fbcdn.net/v/t39.30808-6/467634242_1106782254790041_1867188198524560196_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_ohc=i0NK1_XyPs0Q7kNvgGZjZ5L&_nc_zt=23&_nc_ht=scontent-sof1-2.xx&_nc_gid=A8a4n6RIrWeJFg8uirgqmoj&oh=00_AYCcxyYse7WUz_FkEI9-WiPrY-VIewSh77ITKZ50Q4PlwQ&oe=676EDC8A" alt="Rosda School Image">
                     </div>
                     <div class="course__text">
-                        <h3>Partnership with École EVA Dakar </h3>
+                        <h3>Partnership with Rosda School </h3>
                         <p>Our partnership with the E.V.A Prescolaire & Elementaire marks our second partnership in the country of Senegal, this time in the bustling capital city of Dakar!. They were referred to us by our other client in Senegal, and we are very glad to be supporting both our missions! Would your school like to apply to SMZ Education? Contact us at <a href="mailto:contact@smzedu.com">contact@smzedu.com</a>.</p>
-                        <a class="btn btn-primary" href="/contact/">Contact</a>
+                        <a class="btn btn-primary">Website in progres...</a>
                     </div>
                 </article>
             </div>
 
             <div class="course" data-tilt data-tilt-glare>
                 <article>
+                    <div style="text-align: center;" class="course__header">
+                        <span class="course__date">20/11/2024</span>
+                        <span class="course__author">Kerem Semiz</span>
+                    </div>
                     <div class="course__image">
-                        <img src="/images/shiloh.png" alt="Shiloh Académie">
+                        <img style="height: 16rem;" src="https://st-k-michaels-school.smzedu.com/assets/images/gallery-24.jpg" alt="St. K Michael's School Image">
                     </div>
                     <div class="course__text">
-                        <h3>Partnership With Shiloh Académie</h3>
-                        <p>We are very proud to announce our first ever partnership with Shiloh Académie from Gandigal-Est, Senegal. As a school whose goal it was to bring the "American Dream" to Senegal in order to prevent young Senegalese from meeting unfortunate ends while trying to immigrate to Europe via boats, we are glad to help them in their mission. Would your school like to apply to SMZ Education? Contact us at <a href="mailto:contact@smzedu.com">contact@smzedu.com</a>.</p>
-                        <a class="btn btn-primary" href="/contact/">Contact</a>
+                        <h3>Partnership with St. K Michael's School</h3>
+                        <p>Our partnership with the E.V.A Prescolaire & Elementaire marks our second partnership in the country of
+                            Senegal, this time in the bustling capital city of Dakar!. They were referred to us by our other client
+                            in Senegal, and we are very glad to be supporting both our missions! Would your school like to apply to
+                            SMZ Education? Contact us at <a href="mailto:contact@smzedu.com">contact@smzedu.com</a>.</p>
+                        <a class="btn btn-primary" href="https://st-k-michaels-school.smzedu.com/home/">Visit Website</a>
                     </div>
                 </article>
             </div>
-    
-        
+
             <div class="course" data-tilt data-tilt-glare>
                 <article>
+                    <div style="text-align: center;" class="course__header">
+                        <span class="course__date">19/10/2024</span>
+                        <span class="course__author">Kerem Semiz</span>
+                    </div>
                     <div class="course__image">
-                        <img src="/images/Pakistan (2).png" alt="Africa Branch Opened">
+                        <img style="height: 16rem;" src="https://archive.mundusmaris.org/images/stories/Gambia-SLBS/slbs_library02.jpg" alt="Serrekunda Lower Basic School Image">
                     </div>
                     <div class="course__text">
-                        <h3>Africa Branch Opened!</h3>
-                        <p>We congratulate ourselves for now being able to service countries in Africa! The continent where we currently serve the most countries is Africa, and therefore we are spending the most time to strike deals with schools in the African Continent! If you want to benefit from our services and happen to be in Africa, contact us and apply for free at <a href="mailto:contact@smzedu.com">contact@smzedu.com</a>.</p>
-                        <a class="btn btn-primary" href="/contact/">Contact</a>
+                        <h3>Partnership With Serrekunda Lower Basic School</h3>
+                        <p>We are very proud to announce our first ever partnership with Shiloh Académie from Gandigal-Est, Senegal. As a school whose goal it was to bring the "American Dream" to Senegal in order to prevent young Senegalese from meeting unfortunate ends while trying to immigrate to Europe via boats, we are glad to help them in their mission. Would your school like to apply to SMZ Education? Contact us at <a href="mailto:contact@smzedu.com">contact@smzedu.com</a>.</p>
+                        <a class="btn btn-primary">Website in progres...</a>
                     </div>
                 </article>
             </div>
         </div>
     </section>
     <!--end of courses-->
+
+    <!--start of map-->
+        <section class="map-section">
+            <h1>Our Project Map</h1>
+            <div id="map">
+                <div id="total-schools" class="total-schools">
+                    <h4>Total Schools:</h4>
+                    <p>We have partnered with <span id="school-count"></span> schools!</p>
+                </div>
+            </div>
+        </section>
+
+    <!-- end of map-->
 
     <!--start of faqs--> 
     <section class="faqs">
@@ -186,7 +222,7 @@
                 <div class="faq__icon"><i class="uil uil-plus"></i></div>
                 <div class="questionAnswer">
                     <h4>How can I share SMZ Education?</h4>
-                    <p>Sharing our media is a great way to help us, consider sharing our website url, instagram account, or even LinkedIN!</p>
+                    <p>Sharing our media is a great way to help us, consider sharing our website url, instagram account, or even LinkedIn!</p>
                 </div>
             </article>
 
@@ -208,9 +244,8 @@
                     <li><a href="/home/">Home</a></li>
                     <li><a href="/about/">About</a></li>
                     <li><a href="/projects/">Projects</a></li>
-                    <li><a href="/map/">Map</a></li>
                     <li><a href="/contact/">Contact</a></li>
-                <!--<li><a href="https://gofund.me/8dc15ea9">Donate</a></li>--> 
+                    <li><a href="https://gofund.me/dc392551">Donate</a></li>
                 </ul>
             </div>
             <div class="footer__privacy">
@@ -235,5 +270,112 @@
     <script src="/general/cookies.js"></script>
     <script src="/general/vanilla-tilt.js"></script>
     <script src="/general/main.js"></script>
+    <script>
+        var latitudeInitial = 14.349319;
+        var longitudeInitial = -3.653342;
+        var initialZoom = 5;
+        var schools = [
+            {
+                name: "SMZ Education Headquarters",
+                location: [52.450822, 13.273018],
+                imageUrl: "/images/SMZ_LOGO__3_-removebg-preview.png",
+                address: "Saargemünder Straße 30, Berlin",
+                description: "smzedu.com",
+                contact: "Phone: +49 15224407028"
+            },
+            {
+                name: "École Bilingue Shiloh Académie",
+                location: [14.471422, -16.998958],
+                imageUrl: "/images/SMZ_LOGO__3_-removebg-preview.png",
+                address: "F2C2+GCH, Gandigal-Est, Senegal",
+                description: "shilohacademie.smzedu.com",
+                contact: "Phone: +221 339355619"
+            },
+
+            {
+                name: "École EVA Dakar",
+                location: [14.669508, -17.431205],
+                imageUrl: "/images/SMZ_LOGO__3_-removebg-preview.png",
+                address: "93 Rue Amadou Assane Ndoye, Dakar, Senegal",
+                description: "evaschooldakar.smzedu.com",
+                contact: "Phone: +221 172658892"
+            },
+
+            {
+                name: "Serekunda Lower Basic School",
+                location: [13.433927, -16.678770],
+                imageUrl: "/images/SMZ_LOGO__3_-removebg-preview.png",
+                address: "Serrekunda Lower Basic School, Serrekunda, The Gambia",
+                description: "Website in progress...",
+                contact: "Phone: +216 50481387"
+            },
+
+            {
+                name: "St. K Michael's School",
+                location: [5.613572, -0.250042],
+                imageUrl: "/images/SMZ_LOGO__3_-removebg-preview.png",
+                address: "Nii Okaiman Ave, Accra, Ghana",
+                description: "st-k-michaels-school.smzedu.com",
+                contact: "Phone: +233 302416431"
+            },
+            {
+                name: "Rosda School",
+                location: [5.532382, -0.258736],
+                imageUrl: "/images/SMZ_LOGO__3_-removebg-preview.png",
+                address: "Kaashimi St, Accra, Ghana",
+                description: "Website in progress...",
+                contact: "Phone: -------------"
+            }
+        ];
+    document.getElementById('school-count').textContent = schools.length - 1;
+
+    var map = L.map('map', {
+        center: [latitudeInitial, longitudeInitial],
+        zoom: initialZoom,
+        attributionControl: false
+    });
+
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: 'Map data &copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    // Add markers with improved popup behavior
+    schools.forEach(function (school) {
+        var customIcon = L.divIcon({
+            className: 'custom-icon',
+            html: '<img src="/images/SMZ_LOGO__3_-removebg-preview.png" alt="School Logo">',
+            iconSize: [38, 38],
+            iconAnchor: [19, 19],
+            popupAnchor: [0, -19]
+        });
+
+        var popupContent = `
+        <div class="popup-content">
+            <h3>${school.name}</h3>
+            <p><strong>Address:</strong> ${school.address}</p>
+        </div>
+    `;
+
+        L.marker(school.location, { icon: customIcon })
+            .bindPopup(popupContent, {
+                autoPan: true,
+                autoPanPadding: [50, 50] // Prevents excessive panning
+            })
+            .addTo(map);
+    });
+
+    // Delay invalidateSize to fix map rendering issues
+    setTimeout(function () {
+        map.invalidateSize();
+    }, 500);
+
+    // Ensure proper map rendering on window resize
+    window.addEventListener('resize', function () {
+        map.invalidateSize();
+    });
+
+</script>
+
 </body>
 </html>

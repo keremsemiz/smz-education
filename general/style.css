@@ -76,7 +76,7 @@ img{
     transition: var(--transition);
     border-radius: 1.2rem;
 }
-.btn :hover{
+.btn:hover{
     background: transparent;
     color: var(--color-white);
     border-color: var(--color-white);
@@ -91,7 +91,18 @@ img{
     from { opacity: 0; }
     to { opacity: 1; }
 }
-.cookie__popup{
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none;
+}
+
+.donation__popup {
     opacity: 0;
     animation: fadeIn 1s ease forwards;
     display: none;
@@ -106,30 +117,35 @@ img{
     padding: 20px;
     z-index: 1000;
     border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
-.cookie__text{
-    text-align: center;
-    margin: 1rem;
+
+.gfm-embed iframe{
+    height: 200px;
+    overflow-y: scroll;
 }
-.cookie__text p{
-    text-align: center;
-    margin-top: 1rem;
-}
-.cookie__button{
-    margin-top: 2rem;
-    margin-bottom: 1rem;
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    z-index: 1001;
 }
 /*******************************NAVBAR***************************/
-nav{
+nav {
+    background-image: none;
     background: rgba(255, 255, 255, 0.11);
-    backdrop-filter: blur(10px);  
+    backdrop-filter: blur(10px);
     width: 100%;
     height: 5rem;
     position: fixed;
-    top: 0;
+    top: 3.1rem;
     z-index: 11;
-}                                    
+    transition: top 0.3s;
+}
 .window-scroll{
     background: rgba(255, 255, 255, 0.11);
     backdrop-filter: blur(10px);
@@ -237,48 +253,108 @@ header{
 }
 
 /*******************************POPULARCOURSES***************************/
-.courses{
+.courses {
     background: var(--color-bg);
+    text-align: center;
+    padding: 2rem 0;
 }
-.courses__container{
+
+.courses__container {
+    width: 80%;
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
+    justify-content: center;
 }
-.courses h1{
+
+.courses h1 {
     line-height: 1;
     margin-bottom: 1rem;
     text-align: center;
     padding-top: 2rem;
     padding-bottom: 2rem;
 }
-.courses h2{
+
+.courses h2 {
     line-height: 1;
     margin-bottom: 1rem;
 }
-.course{
+
+.course {
     background-color: var(--color-bg1);
     transition: var(--transition);
     text-align: center;
+    width: 100%;
+    height: 50rem;
+    max-width: 30rem;
+    margin: auto;
 }
-.course__text{
+
+.course__header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    background: var(--color-bg1);
+    color: var(--color-white);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.course__date,
+.course__author {
+    font-size: 0.8rem;
+}
+
+.course__text {
     text-align: center;
     padding: 2.5rem;
 }
-.course p{
+
+.course p {
     padding-bottom: 1rem;
 }
-.course1{
+/* Specific styles for the courses in the projects page */
+.projects .courses__container {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 3rem;
+    justify-content: center;
+}
+
+.projects .course {
     background-color: var(--color-bg1);
     transition: var(--transition);
     text-align: center;
-    padding: 2rem;
-    border-radius: 2rem;
-    width: fit-content;
+    width: 100%;
+    max-width: 40rem;
     margin: auto;
 }
-.courses1{
-    background: var(--color-bg);
+
+.projects .course__header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    background: var(--color-bg1);
+    color: var(--color-white);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.projects .course__date,
+.projects .course__author {
+    font-size: 0.8rem;
+}
+
+.projects .course__text {
+    text-align: center;
+    padding: 2.5rem;
+}
+
+.projects .course p {
+    padding-bottom: 1rem;
 }
 /*******************************FAQ***************************/
 
@@ -370,7 +446,102 @@ header{
     display: flex;
     gap: 1rem;
 }
+/*******************************IMPORTANT BANNER***************************/
+.importantBanner {
+    background: var(--color-danger);
+    color: var(--color-white);
+    padding: 1rem;
+    text-align: center;
+    font-weight: 300;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3.1rem;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.bannerText{
+    font-size: 1rem;
+    font-weight: 500;
+    margin-right: 1rem;
+}
+
+header {
+    margin-top: 0rem;
+}
+.importantBanner button{
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.9rem;
+    margin-left: 1rem;
+    padding: 0.5rem;
+    border-radius: 0%;
+}
+/*******************************MAP SECTION***************************/
+.map-section {
+    background-color: var(--color-bg1);
+}
+    
+.map-section h1 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+#map {
+    z-index: 10;
+    position: relative;
+    height: 800px;
+    width: 80%;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+    
+.custom-icon {
+    background-color: #011D3B; 
+    border: 2px solid #ffffff;
+    background-image: '/images/SMZ_LOGO__3_-removebg-preview.png';
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+}
+.custom-icon img {
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+}
+.total-schools {
+    z-index: 1000;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: #011D3B;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.total-schools h4 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.total-schools p {
+    margin: 5px 0 0;
+    font-size: 14px;
+}
 /*******************************MEDIA QUERY TABLETS***************************/
 @media screen and (max-width: 1024px){
     .container{
@@ -485,12 +656,31 @@ header{
 }
 /*******************************MEDIA QUERY PHONES***************************/
 @media screen and (max-width: 600px){
+    .donation__popup {
+        z-index: 9999;
+        width: 90%;
+        max-width: none;
+        height: auto;
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+    .gfm-embed iframe {
+        width: 100% !important;
+        height: 250px !important;
+    }
+
+    .importantBanner h3{
+        font-size: 0.75rem;
+    }
     .container{
         max-width: var(--container-width-sm);   
     }
         /****************NAVBAR***************/
     .nav__menu{
         right: 3%;
+    }
+    nav h1{
+        font-size: 1.8rem
     }
         /****************HEADER***************/
     header{
@@ -557,5 +747,13 @@ header{
     }
     .footer__contact li{
         text-align: center;
+    }
+}
+@media screen and (max-width: 375px) {
+    .importantBanner h3{
+        font-size: 0.8rem;
+    }
+    .importantBanner button{
+        font-size: 0.8rem;
     }
 }
