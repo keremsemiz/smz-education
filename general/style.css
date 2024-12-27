@@ -27,7 +27,7 @@
     --transition: all 400ms ease;
 }
 body{
-    font-family: "Montserrat", sans-serif;
+    font-family: "Archivo", sans-serif;
     line-height: 1.7;
     color: var(--color-white);
     background-image: url(https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
@@ -50,13 +50,13 @@ h1{
     font-size: 2.4rem;
 }
 h2{
-    font-size: 2rem;
+    font-size: 2.2rem;
 }
 h3{
-    font-size: 1.6rem;
+    font-size: 1.8rem;
 }
 h4{
-    font-size: 1.3rem;
+    font-size: 1.5rem;
 }
 a{
     color: var(--color-white);
@@ -131,7 +131,7 @@ img{
     right: 10px;
     color: white;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     z-index: 1001;
 }
 /*******************************NAVBAR***************************/
@@ -168,7 +168,7 @@ nav button{
     gap: 4rem;
 }
 .nav__menu a{
-    font-size: 0.9rem;
+    font-size: 1rem;
     transition: var(--transition)
 }
 .nav__menu a:hover{
@@ -240,10 +240,11 @@ header{
     border-radius: 0.9rem;
 }
 .category h5{
+    font-size: 1.1rem;
     margin: 2rem 0 1rem;
 }
 .category p{
-    font-size: 0.85rem;
+    font-size: 1rem;
 }
 .category:nth-child(2) .category__icon{
     background-color: var(--color-danger);
@@ -303,7 +304,7 @@ header{
 
 .course__date,
 .course__author {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 }
 
 .course__text {
@@ -345,7 +346,7 @@ header{
 
 .projects .course__date,
 .projects .course__author {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 }
 
 .projects .course__text {
@@ -381,7 +382,7 @@ header{
     cursor: pointer;
 }
 .faq h4{
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     padding: 1rem 1rem 1rem 1rem;
 }
 .faq p{
@@ -465,7 +466,7 @@ header{
 }
 
 .bannerText{
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 500;
     margin-right: 1rem;
 }
@@ -474,8 +475,8 @@ header {
     margin-top: 0rem;
 }
 .importantBanner button{
-    font-family: "Montserrat", sans-serif;
-    font-size: 0.9rem;
+    font-family: "Archivo", sans-serif;
+    font-size: 0.95rem;
     margin-left: 1rem;
     padding: 0.5rem;
     border-radius: 0%;
@@ -510,7 +511,7 @@ header {
     align-items: center;
     justify-content: center;
     color: #ffffff;
-    font-size: 14px;
+    font-size: 22px;
     font-weight: bold;
 }
 .custom-icon img {
@@ -527,20 +528,20 @@ header {
     color: white;
     padding: 15px;
     border-radius: 8px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Archivo', sans-serif;
     z-index: 1000;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .total-schools h4 {
     margin: 0;
-    font-size: 16px;
+    font-size: 22px;
     font-weight: bold;
 }
 
 .total-schools p {
     margin: 5px 0 0;
-    font-size: 14px;
+    font-size: 16px;
 }
 /*******************************MEDIA QUERY TABLETS***************************/
 @media screen and (max-width: 1024px){
@@ -548,23 +549,23 @@ header {
         width: var(--container-width-md);
     }
     h1{
-        font-size: 2.2rem;
+        font-size: 2.3rem;
     }
     h2{
-        font-size: 1.7rem;
+        font-size: 1.8rem;
     }
     h3{
-        font-size: 1.3rem;
+        font-size: 1.4rem;
     }
     h4{
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
     /****************NAVBAR***************/
 
     nav button{
         display: inline-block;
         background: transparent;
-        font-size: 1.8rem;
+        font-size: 1.9rem;
         color: var(--color-white);
     }
     nav button#close-menu-btn{
@@ -670,7 +671,7 @@ header {
     }
 
     .importantBanner h3{
-        font-size: 0.75rem;
+        font-size: 0.8rem;
     }
     .container{
         max-width: var(--container-width-sm);   
@@ -680,7 +681,7 @@ header {
         right: 3%;
     }
     nav h1{
-        font-size: 1.8rem
+        font-size: 1.9rem
     }
         /****************HEADER***************/
     header{
@@ -751,9 +752,9 @@ header {
 }
 @media screen and (max-width: 375px) {
     .importantBanner h3{
-        font-size: 0.8rem;
+        font-size: 0.85rem;
     }
     .importantBanner button{
-        font-size: 0.8rem;
+        font-size: 0.85rem;
     }
 }
