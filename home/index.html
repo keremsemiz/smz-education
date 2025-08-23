@@ -3,9 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SMZ Education - Bringing Technology to Schools</title>
+    <title>SMZ Education - Free Technology & Websites for Schools Worldwide</title>
     <meta name="description"
-        content="SMZ Education provides free technology and web presence for schools worldwide. Explore our projects and learn how we can help your school.">
+        content="SMZ Education provides free technology, website development, and digital infrastructure to schools worldwide. Empowering 8500+ students across 8+ schools in 3 countries. Get your free school website today.">
+    <meta name="keywords" content="free school websites, educational technology, school digital infrastructure, non-profit education, website development for schools, SMZ Education, Ghana schools, Senegal schools, Gambia schools, free email for schools">
+    <meta name="author" content="SMZ Education">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://smzedu.com/home/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://smzedu.com/home/">
+    <meta property="og:title" content="SMZ Education - Free Technology & Websites for Schools Worldwide">
+    <meta property="og:description" content="Empowering 8500+ students across 8+ schools in 3 countries with free technology and digital infrastructure. Get your free school website today.">
+    <meta property="og:image" content="https://smzedu.com/images/SMZ_LOGO__3_-removebg-preview.png">
+    <meta property="og:site_name" content="SMZ Education">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://smzedu.com/home/">
+    <meta property="twitter:title" content="SMZ Education - Free Technology & Websites for Schools Worldwide">
+    <meta property="twitter:description" content="Empowering 8500+ students across 8+ schools in 3 countries with free technology and digital infrastructure.">
+    <meta property="twitter:image" content="https://smzedu.com/images/SMZ_LOGO__3_-removebg-preview.png">
+    
+    <!-- Geo Tags -->
+    <meta name="geo.region" content="GH-AA,SN-DK,GM-B">
+    <meta name="geo.placename" content="Accra, Dakar, Serrekunda">
+    <meta name="geo.position" content="5.6037;-0.1870">
+    
     <link rel="icon" href="/images/SMZ_LOGO__3_-removebg-preview.png" type="image/iconX">
     <link rel="stylesheet" href="/general/style.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
@@ -15,6 +40,43 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SMZ Education",
+        "alternateName": "SMZ EDU",
+        "url": "https://smzedu.com",
+        "logo": "https://smzedu.com/images/SMZ_LOGO__3_-removebg-preview.png",
+        "description": "Non-profit organization providing free technology and website development to schools worldwide",
+        "foundingDate": "2024-05-01",
+        "founder": {
+            "@type": "Person",
+            "name": "Kerem Semiz"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+49-15224407028",
+            "contactType": "customer service",
+            "email": "contact@smzedu.com"
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Saargemünder Straße 30",
+            "addressLocality": "Berlin",
+            "addressCountry": "DE"
+        },
+        "sameAs": [
+            "https://www.linkedin.com/company/smzedu/",
+            "https://gofund.me/dc392551"
+        ],
+        "areaServed": ["Ghana", "Senegal", "The Gambia"],
+        "serviceType": "Educational Technology Services"
+    }
+    </script>
+    
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             var links = document.getElementsByTagName('link');
@@ -63,13 +125,13 @@
     </div>
 
 
-    <header>
+    <header itemscope itemtype="https://schema.org/WPHeader">
         <div class="container header__container">
             <div class="header__left">
-                <h1>Bring Technology to all Schools!</h1>
-                <p>At the SMZ Education Non-Profit, our goal is to make technology and online presence available for all
+                <h1 itemprop="headline">Bring Technology to all Schools!</h1>
+                <p itemprop="description">At the SMZ Education Non-Profit, our goal is to make technology and online presence available for all
                     schools, no matter where they are, for free!</p>
-                <a class="btn btn-primary" href="/projects/">Explore</a>
+                <a class="btn btn-primary" href="/projects/" aria-label="Explore our projects">Explore</a>
             </div>
             <div class="header__right">
                 <!-- Add relevant image here -->
