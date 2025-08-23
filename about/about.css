@@ -85,8 +85,8 @@
 
 /*******************************MISSION & VISION***************************/
 .mission-vision {
-    background: var(--color-bg);
-    padding: 6rem 0;
+  background: var(--color-bg);
+  padding: 6rem 0;
 }
 
 .mission-vision__container {
@@ -107,12 +107,12 @@
 
 .mission-card,
 .vision-card {
-    background: var(--color-bg1);
-    padding: 3rem 2rem;
-    border-radius: 2rem;
-    text-align: center;
-    transition: var(--transition);
-    border: 1px solid transparent;
+  background: var(--color-bg1);
+  padding: 3rem 2rem;
+  border-radius: 2rem;
+  text-align: center;
+  transition: var(--transition);
+  border: 1px solid transparent;
 }
 
 .mission-card:hover,
@@ -145,8 +145,8 @@
 
 /*******************************VALUES***************************/
 .values {
-    background: var(--color-bg1);
-    padding: 6rem 0;
+  background: var(--color-bg1);
+  padding: 6rem 0;
 }
 
 .values__container {
@@ -166,12 +166,12 @@
 }
 
 .value {
-    background: var(--color-bg2);
-    padding: 2.5rem 1.5rem;
-    border-radius: 1.5rem;
-    text-align: center;
-    transition: var(--transition);
-    border: 1px solid transparent;
+  background: var(--color-bg2);
+  padding: 2.5rem 1.5rem;
+  border-radius: 1.5rem;
+  text-align: center;
+  transition: var(--transition);
+  border: 1px solid transparent;
 }
 
 .value:hover {
