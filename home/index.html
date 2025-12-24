@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -40,13 +41,15 @@
     <link rel="preload" href="/general/style.css" as="style">
     <link rel="stylesheet" href="/general/style.css">
 
-    <!-- Preconnect to external resources -->
+    <!-- DNS Prefetch and Preconnect for performance -->
+    <link rel="dns-prefetch" href="https://www.gofundme.com">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://unicons.iconscout.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://unpkg.com">
 
-    <!-- Async load non-critical CSS -->
+    <!-- Async load non-critical CSS with font-display swap -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" media="print"
         onload="this.media='all'">
     <link rel="stylesheet"
@@ -126,11 +129,12 @@
     <!--donation popup-->
     <div class="overlay"></div>
     <div class="donation__popup">
-        <a class="close-btn" href="#">X</a>
+        <a class="close-btn" href="#" aria-label="Close donation popup">X</a>
         <h2 style="text-align: center;">Your donation matters.</h2>
         <p style="text-align: center;">Please click for more information.</p>
         <a href="https://gofund.me/d8dfcdac"><img
-                src="/images/Orange Colorful Shapes and Scribbles Medical Needs GoFundMe Story Image.png" alt=""></a>
+                src="/images/Orange Colorful Shapes and Scribbles Medical Needs GoFundMe Story Image.png"
+                alt="SMZ Education Donation Campaign" width="800" height="800" loading="lazy"></a>
         <div class="gfm-embed"
             data-url="https://www.gofundme.com/f/help-continue-our-mission-helping-underdeveloped-schools/widget/medium?sharesheet=manage hero&attribution_id=sl:49abbbef-e426-4aae-b7eb-4fad0b488421">
         </div>
@@ -162,7 +166,8 @@
                 <p>Our main goal is to provide web presence and technology to all schools for free. We do this by
                     following the three segments on the right. At SMZ Education, we create, maintain, and update a
                     website, emails, and Google Maps data for your school!</p>
-                <a class="btn" href="/about/">Learn More</a>
+                <a class="btn" href="/about/" aria-label="Learn more about what SMZ Education does">Learn More About Our
+                    Services</a>
             </div>
             <div class="categories__right">
                 <div class="categories__tilt" data-tilt>
@@ -208,7 +213,9 @@
                 </div>
                 <article>
                     <div class="course__image">
-                        <img style="height: 16rem;" src="/images/zamsa.png" alt="Zamsa Academy Image" loading="lazy">
+                        <img style="height: 16rem;" src="/images/zamsa.png"
+                            alt="Zamsa Academy - Private school in Accra, Ghana partnered with SMZ Education"
+                            width="335" height="256" loading="lazy">
                     </div>
                     <div class="course__text">
                         <h3>Partnership with Zamsa Academy</h3>
@@ -232,7 +239,8 @@
                 <article>
                     <div class="course__image">
                         <img style="height: 16rem;" src="/images/godsfield.png"
-                            alt="God's Field Montessori School Image" loading="lazy">
+                            alt="God's Field Montessori School - Montessori education in Accra, Ghana" width="335"
+                            height="256" loading="lazy">
                     </div>
                     <div class="course__text">
                         <h3>Partnership with God's Field Montessori School</h3>
@@ -462,9 +470,11 @@
                 <p><a href="mailto:contact@smzedu.com">contact@smzedu.com</a></p>
                 <p><a href="mailto:support@smzedu.com">support@smzedu.com</a></p>
                 <div class="footer__socials">
-                    <a href="/contact/"><i class="uil uil-envelopes"></i></a>
-                    <a href="https://www.linkedin.com/company/smzedu/"><i class="uil uil-linkedin-alt"></i></a>
-                    <a href="https://www.smzedu.com/home"><i class="uil uil-desktop"></i></a>
+                    <a href="/contact/" aria-label="Contact us via email"><i class="uil uil-envelopes"></i></a>
+                    <a href="https://www.linkedin.com/company/smzedu/" aria-label="Follow us on LinkedIn"
+                        target="_blank" rel="noopener"><i class="uil uil-linkedin-alt"></i></a>
+                    <a href="https://www.smzedu.com/home" aria-label="Visit our website"><i
+                            class="uil uil-desktop"></i></a>
                 </div>
             </div>
         </div>

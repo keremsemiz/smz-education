@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -21,6 +22,10 @@
     <meta property="og:image" content="https://smzedu.com/images/privacy.svg">
 
     <link rel="icon" href="/images/SMZ_LOGO__3_-removebg-preview.png" type="image/png">
+
+    <!-- DNS Prefetch for performance -->
+    <link rel="dns-prefetch" href="https://www.gofundme.com">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
 
     <!-- Preload critical CSS -->
     <link rel="preload" href="/general/style.css" as="style">
@@ -78,11 +83,26 @@
         </div>
     </nav>
     <!--end of navbar-->
+    <!--donation popup-->
+    <div class="overlay"></div>
+    <div class="donation__popup">
+        <a class="close-btn" href="#" aria-label="Close donation popup">X</a>
+        <h2 style="text-align: center;">Your donation matters.</h2>
+        <p style="text-align: center;">Please click for more information.</p>
+        <a href="https://gofund.me/d8dfcdac"><img
+                src="/images/Orange Colorful Shapes and Scribbles Medical Needs GoFundMe Story Image.png"
+                alt="SMZ Education Donation Campaign" width="800" height="800" loading="lazy"></a>
+        <div class="gfm-embed"
+            data-url="https://www.gofundme.com/f/help-continue-our-mission-helping-underdeveloped-schools/widget/medium?sharesheet=manage hero&attribution_id=sl:49abbbef-e426-4aae-b7eb-4fad0b488421">
+        </div>
+        <script defer src="https://www.gofundme.com/static/js/embed.js"></script>
+    </div>
 
+    <!--end of donation popup-->
     <header>
         <div class="container header__container">
             <div class="header__left">
-                <h1>Privacy Policy</h1>
+                <h1>Privacy Policy and Security Measures</h1>
                 <p>At SMZ Education, we are transparent about what data we use. A detailed list is below.</p>
             </div>
         </div>

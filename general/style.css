@@ -136,7 +136,7 @@ img {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: auto;
+  width: 90%;
   max-width: 30rem;
   background: var(--color-bg2);
   color: white;
@@ -144,6 +144,14 @@ img {
   z-index: 1000;
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.donation__popup img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  border-radius: 8px;
+  margin: 1rem 0;
 }
 
 .gfm-embed iframe {
@@ -597,8 +605,10 @@ header {
   font-family: "Archivo", sans-serif;
   font-size: 0.95rem;
   margin-left: 1rem;
-  padding: 0.5rem;
-  border-radius: 0%;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: var(--transition);
 }
 
 /*******************************GDPR COOKIE CONSENT***************************/
@@ -908,14 +918,17 @@ header {
   border: 2px solid #ffffff;
   background-image: "/images/SMZ_LOGO__3_-removebg-preview.png";
   border-radius: 50%;
-  width: 38px;
-  height: 38px;
+  width: 48px;
+  height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #ffffff;
   font-size: 22px;
   font-weight: bold;
+  cursor: pointer;
+  min-width: 48px;
+  min-height: 48px;
 }
 
 .custom-icon img {

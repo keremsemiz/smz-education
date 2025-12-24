@@ -183,6 +183,14 @@
 
     // Insert before closing body tag
     document.body.insertAdjacentHTML("beforeend", bannerHTML);
+
+    // Add title to GoFundMe iframe when it loads for accessibility
+    setTimeout(() => {
+      const gfmIframe = document.querySelector(".gfm-embed-iframe");
+      if (gfmIframe && !gfmIframe.hasAttribute("title")) {
+        gfmIframe.setAttribute("title", "GoFundMe Donation Widget");
+      }
+    }, 2000);
   }
 
   // Set up event listeners
