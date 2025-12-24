@@ -5,42 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SMZ Education - Free Technology & Websites for Schools Worldwide</title>
     <meta name="description"
-        content="SMZ Education provides free technology, website development, and digital infrastructure to schools worldwide. Empowering 8500+ students across 8+ schools in 3 countries. Get your free school website today.">
-    <meta name="keywords" content="free school websites, educational technology, school digital infrastructure, non-profit education, website development for schools, SMZ Education, Ghana schools, Senegal schools, Gambia schools, free email for schools">
+        content="SMZ Education provides free technology, website development, and digital infrastructure to schools worldwide. Empowering 13000+ students across 8+ schools in 3 countries. Get your free school website today.">
+    <meta name="keywords"
+        content="free school websites, educational technology, school digital infrastructure, non-profit education, website development for schools, SMZ Education, Ghana schools, Senegal schools, Gambia schools, free email for schools">
     <meta name="author" content="SMZ Education">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://smzedu.com/home/">
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://smzedu.com/home/">
     <meta property="og:title" content="SMZ Education - Free Technology & Websites for Schools Worldwide">
-    <meta property="og:description" content="Empowering 8500+ students across 8+ schools in 3 countries with free technology and digital infrastructure. Get your free school website today.">
+    <meta property="og:description"
+        content="Empowering 13000+ students across 8+ schools in 3 countries with free technology and digital infrastructure. Get your free school website today.">
     <meta property="og:image" content="https://smzedu.com/images/SMZ_LOGO__3_-removebg-preview.png">
     <meta property="og:site_name" content="SMZ Education">
-    
+
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://smzedu.com/home/">
     <meta property="twitter:title" content="SMZ Education - Free Technology & Websites for Schools Worldwide">
-    <meta property="twitter:description" content="Empowering 8500+ students across 8+ schools in 3 countries with free technology and digital infrastructure.">
+    <meta property="twitter:description"
+        content="Empowering 13000+ students across 8+ schools in 3 countries with free technology and digital infrastructure.">
     <meta property="twitter:image" content="https://smzedu.com/images/SMZ_LOGO__3_-removebg-preview.png">
-    
+
     <!-- Geo Tags -->
     <meta name="geo.region" content="GH-AA,SN-DK,GM-B">
     <meta name="geo.placename" content="Accra, Dakar, Serrekunda">
     <meta name="geo.position" content="5.6037;-0.1870">
-    
-    <link rel="icon" href="/images/SMZ_LOGO__3_-removebg-preview.png" type="image/iconX">
-    <link rel="stylesheet" href="/general/style.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+    <link rel="icon" href="/images/SMZ_LOGO__3_-removebg-preview.png" type="image/png">
+
+    <!-- Preload critical CSS -->
+    <link rel="preload" href="/general/style.css" as="style">
+    <link rel="stylesheet" href="/general/style.css">
+
+    <!-- Preconnect to external resources -->
+    <link rel="preconnect" href="https://unicons.iconscout.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    
+    <link rel="preconnect" href="https://unpkg.com">
+
+    <!-- Async load non-critical CSS -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" media="print"
+        onload="this.media='all'">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap"
+        media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+    </noscript>
+
+    <!-- Defer Leaflet JS -->
+    <script defer src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
     {
@@ -75,15 +97,6 @@
         "areaServed": ["Ghana", "Senegal", "The Gambia"],
         "serviceType": "Educational Technology Services"
     }
-    </script>
-    
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var links = document.getElementsByTagName('link');
-            for (var i = 0; i < links.length; i++) {
-                links[i].media = 'all';
-            }
-        });
     </script>
 </head>
 
@@ -129,7 +142,8 @@
         <div class="container header__container">
             <div class="header__left">
                 <h1 itemprop="headline">Bring Technology to all Schools!</h1>
-                <p itemprop="description">At the SMZ Education Non-Profit, our goal is to make technology and online presence available for all
+                <p itemprop="description">At the SMZ Education Non-Profit, our goal is to make technology and online
+                    presence available for all
                     schools, no matter where they are, for free!</p>
                 <a class="btn btn-primary" href="/projects/" aria-label="Explore our projects">Explore</a>
             </div>
@@ -189,94 +203,71 @@
         <div class="container courses__container">
             <div class="course" data-tilt data-tilt-glare>
                 <div style="text-align: center;" class="course__header">
-                    <span class="course__date">23/08/2025</span>
+                    <span class="course__date">21/12/2025</span>
                     <span class="course__author">- Kerem Semiz</span>
                 </div>
                 <article>
                     <div class="course__image">
-                        <img style="height: 16rem;"
-                            src="https://scontent.fadb6-4.fna.fbcdn.net/v/t39.30808-6/506182662_122137134218803385_9059656656144011188_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=MRVQdrKEk3QQ7kNvwExkZqb&_nc_oc=AdmOKrc4enIN97qS2qoSSG8lBb-Ap7ZtT1SXL987S9dcY7XxXh3bk_0bgi2bXLivXxI&_nc_zt=23&_nc_ht=scontent.fadb6-4.fna&_nc_gid=N84y6ZaY5Z62S9mJdk2foA&oh=00_AfWUHCmo7ETy5h_zB0HtySgHSBMkl8nQyKfpGb9dgN3t8g&oe=68AF85B0"
-                            alt="GARDCCA Partnership Image">
+                        <img style="height: 16rem;" src="/images/zamsa.png" alt="Zamsa Academy Image" loading="lazy">
                     </div>
                     <div class="course__text">
-                        <h3>Partnership with GARDCCA</h3>
-                        <p>Our partnership with the Greater Accra Regional Daycare Centres Association marks a pivotal
-                            point as GARDCCA has over 1000 schools in their organisation! Our goal is to provide each
-                            of the 1000 schools with our support!
-                            Interested in joining the SMZ Education network?
-                            Reach out to us at <a href="mailto:contact@smzedu.com">contact@smzedu.com</a>.</p>
-                        <a class="btn btn-primary" href="https://gardcca.smzedu.com/">Visit
-                            Website</a>
-                    </div>
-                </article>
-            </div>
-
-            <div class="course" data-tilt data-tilt-glare>
-                <div style="text-align: center;" class="course__header">
-                    <span class="course__date">25/04/2025</span>
-                    <span class="course__author">- Kerem Semiz</span>
-                </div>
-                <article>
-                    <div class="course__image">
-                        <img style="height: 16rem;" src="/images/winterville.jpg" alt="Winterville Rangers Image">
-                    </div>
-                    <div class="course__text">
-                        <h3>Partnership with Winterville Rangers School</h3>
-                        <p>We are delighted to partner with Winterville Rangers School in Accra, Ghana, marking our
-                            fourth partnership in Ghana.
-                            We are excited to work with schools that share our vision for quality education.
-                            Interested in joining the SMZ Education network?
-                            Reach out to us at <a href="mailto:contact@smzedu.com">contact@smzedu.com</a>.</p>
-                        <a class="btn btn-primary" href="https://winterville-rangers-montessori.smzedu.com/home/">Visit
-                            Website</a>
-                    </div>
-                </article>
-            </div>
-
-            <div class="course" data-tilt data-tilt-glare>
-                <div style="text-align: center;" class="course__header">
-                    <span class="course__date">15/12/2024</span>
-                    <span class="course__author">Kerem Semiz</span>
-                </div>
-                <article>
-                    <div class="course__image">
-                        <img style="height: 16rem;" src="https://rosdaschool.smzedu.com/assets/images/gallery/1.jpg"
-                            alt="Rosda School Image">
-                    </div>
-                    <div class="course__text">
-                        <h3>Partnership with Rosda School</h3>
-                        <p>We are delighted to partner with Rosda School in Accra, Ghana, as we continue to extend our
-                            impact in the region.
-                            This partnership represents a shared vision for fostering quality education and empowering
-                            the next generation.
-                            Interested in joining the SMZ
-                            Education network? Reach out to us at <a
+                        <h3>Partnership with Zamsa Academy</h3>
+                        <p>We are thrilled to announce our partnership with Zamsa Academy in Accra, Ghana! This
+                            collaboration
+                            marks another milestone in our mission to bring quality education and digital presence to
+                            schools.
+                            Together, we aim to empower students and create a brighter future.
+                            Interested in joining the SMZ Education network? Reach out to us at <a
                                 href="mailto:contact@smzedu.com">contact@smzedu.com</a>.</p>
-                        <a class="btn btn-primary" href="https://rosdaschool.smzedu.com/home/">Visit Website</a>
+                        <a class="btn btn-primary" href="/projects/">Learn More</a>
                     </div>
                 </article>
             </div>
 
             <div class="course" data-tilt data-tilt-glare>
+                <div style="text-align: center;" class="course__header">
+                    <span class="course__date">10/11/2025</span>
+                    <span class="course__author">- Kerem Semiz</span>
+                </div>
                 <article>
-                    <div style="text-align: center;" class="course__header">
-                        <span class="course__date">20/11/2024</span>
-                        <span class="course__author">Kerem Semiz</span>
-                    </div>
                     <div class="course__image">
-                        <img style="height: 16rem;"
-                            src="https://st-k-michaels-school.smzedu.com/assets/images/gallery-24.jpg"
-                            alt="St. K Michael's School Image">
+                        <img style="height: 16rem;" src="/images/godsfield.png"
+                            alt="God's Field Montessori School Image" loading="lazy">
                     </div>
                     <div class="course__text">
-                        <h3>Partnership with St. K Michael's School</h3>
-                        <p>We are excited to announce our partnership with St. Michael School in Accra, Ghana! This
-                            marks a significant step as
-                            we support education in West Africa. We are thrilled to collaborate!
-                             Would your school like to partner with SMZ Education? Contact us
-                            at <a href="mailto:contact@smzedu.com">contact@smzedu.com</a>.</p>
-                        <a class="btn btn-primary" href="https://st-k-michaels-school.smzedu.com/home/">Visit
-                            Website</a>
+                        <h3>Partnership with God's Field Montessori School</h3>
+                        <p>We are honored to partner with God's Field Montessori School in Accra, Ghana. As another
+                            Montessori
+                            institution joining our network, this partnership reflects our commitment to supporting
+                            diverse
+                            educational methodologies and fostering excellence in early childhood education.
+                            Interested in joining the SMZ Education network? Reach out to us at <a
+                                href="mailto:contact@smzedu.com">contact@smzedu.com</a>.</p>
+                        <a class="btn btn-primary" href="/projects/">Learn More</a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="course" data-tilt data-tilt-glare>
+                <div style="text-align: center;" class="course__header">
+                    <span class="course__date">28/09/2025</span>
+                    <span class="course__author">- Kerem Semiz</span>
+                </div>
+                <article>
+                    <div class="course__image">
+                        <img style="height: 16rem;" src="/images/greenland.png"
+                            alt="Greenland International School Image" loading="lazy">
+                    </div>
+                    <div class="course__text">
+                        <h3>Partnership with Greenland International School</h3>
+                        <p>We are delighted to welcome Greenland International School to the SMZ Education family!
+                            Located in
+                            Accra, Ghana, this partnership represents our continued growth in providing digital
+                            infrastructure
+                            to international schools committed to academic excellence.
+                            Interested in joining the SMZ Education network? Reach out to us at <a
+                                href="mailto:contact@smzedu.com">contact@smzedu.com</a>.</p>
+                        <a class="btn btn-primary" href="/projects/">Learn More</a>
                     </div>
                 </article>
             </div>
@@ -288,11 +279,29 @@
     <!--start of map-->
     <section class="map-section">
         <h1>Our Project Map</h1>
-        <div id="map">
-            <div id="total-schools" class="total-schools">
-                <h4>Total Schools:</h4>
-                <p>We have partnered with <span id="school-count"></span> schools!</p>
+        <div class="maps-container">
+            <div class="map-wrapper">
+                <h3>West Africa Region</h3>
+                <div id="map-west-africa" class="map">
+                    <div class="total-schools">
+                        <h4>West Africa Schools:</h4>
+                        <p><span id="west-africa-count"></span> schools</p>
+                    </div>
+                </div>
             </div>
+            <div class="map-wrapper">
+                <h3>Ghana (Accra)</h3>
+                <div id="map-ghana" class="map">
+                    <div class="total-schools">
+                        <h4>Ghana Schools:</h4>
+                        <p><span id="ghana-count"></span> schools</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="total-schools-summary">
+            <h2>Total Partnerships: <span id="total-schools-count"></span> Schools</h2>
+            <p>Empowering education across 3 countries in West Africa</p>
         </div>
     </section>
 
@@ -306,48 +315,120 @@
                 <div class="faq__icon"><i class="uil uil-plus"></i></div>
                 <div class="questionAnswer">
                     <h4>Do we need to pay anything?</h4>
-                    <p>No — the core services provided by SMZ Education (website creation, basic hosting, Google Maps entries and school email setup) are offered free of charge to eligible schools. We rely on donations and volunteers to cover hosting, maintenance, and development costs. Donations are optional but help us expand and maintain the service, provide faster support, and fund feature improvements. If a school requests custom development, premium integrations, or extended support beyond our standard offering, we may provide paid options or help the school find an affordable third-party provider.</p>
+                    <p>No — the core services provided by SMZ Education (website creation, basic hosting, Google Maps
+                        entries and school email setup) are offered free of charge to eligible schools. We rely on
+                        donations and volunteers to cover hosting, maintenance, and development costs. Donations are
+                        optional but help us expand and maintain the service, provide faster support, and fund feature
+                        improvements. If a school requests custom development, premium integrations, or extended support
+                        beyond our standard offering, we may provide paid options or help the school find an affordable
+                        third-party provider.</p>
                 </div>
             </article>
             <article class="faq">
                 <div class="faq__icon"><i class="uil uil-plus"></i></div>
                 <div class="questionAnswer">
                     <h4>What are the requirements?</h4>
-                    <p>To apply, you should represent an educational institution (school, preschool, learning centre, etc.). We ask for basic information such as the school's name, location, an authorized contact person, and proof of affiliation (for example an official email or document) where applicable. The school should have someone who can act as the day-to-day contact for content updates and approvals. A stable internet connection on the school's side is helpful but not strictly required for all services. After an application, our team will review and reach out to guide you through the onboarding steps.</p>
+                    <p>To apply, you should represent an educational institution (school, preschool, learning centre,
+                        etc.). We ask for basic information such as the school's name, location, an authorized contact
+                        person, and proof of affiliation (for example an official email or document) where applicable.
+                        The school should have someone who can act as the day-to-day contact for content updates and
+                        approvals. A stable internet connection on the school's side is helpful but not strictly
+                        required for all services. After an application, our team will review and reach out to guide you
+                        through the onboarding steps.</p>
                 </div>
             </article>
             <article class="faq">
                 <div class="faq__icon"><i class="uil uil-plus"></i></div>
                 <div class="questionAnswer">
                     <h4>How do I un-enroll?</h4>
-                    <p>If you decide to stop using our services, please email <a href="mailto:support@smzedu.com">support@smzedu.com</a> with your school name, domain (if assigned), and a brief reason for un-enrolling. We'll confirm the account ownership, provide a short checklist to help you back up any data (website files, email contents if applicable), and schedule the removal. Typical removal takes a few business days; we will send a confirmation once the school has been fully removed from our systems. If you need assistance migrating data before un-enrolling, our team can advise on options.</p>
+                    <p>If you decide to stop using our services, please email <a
+                            href="mailto:support@smzedu.com">support@smzedu.com</a> with your school name, domain (if
+                        assigned), and a brief reason for un-enrolling. We'll confirm the account ownership, provide a
+                        short checklist to help you back up any data (website files, email contents if applicable), and
+                        schedule the removal. Typical removal takes a few business days; we will send a confirmation
+                        once the school has been fully removed from our systems. If you need assistance migrating data
+                        before un-enrolling, our team can advise on options.</p>
                 </div>
             </article>
             <article class="faq">
                 <div class="faq__icon"><i class="uil uil-plus"></i></div>
                 <div class="questionAnswer">
                     <h4>Why is your service free?</h4>
-                    <p>SMZ Education is a non-profit initiative funded primarily by donations and supported by volunteers. Offering free core services aligns with our mission to increase educational access. Donations cover hosting, domain registration, platform maintenance, and development of new tools. We also partner with organizations and volunteers who contribute time and expertise. Keeping services free ensures smaller or underfunded schools can still access a professional online presence and basic digital tools. If you are an independent person and would like to support us, you can donate!</p>
+                    <p>SMZ Education is a non-profit initiative funded primarily by donations and supported by
+                        volunteers. Offering free core services aligns with our mission to increase educational access.
+                        Donations cover hosting, domain registration, platform maintenance, and development of new
+                        tools. We also partner with organizations and volunteers who contribute time and expertise.
+                        Keeping services free ensures smaller or underfunded schools can still access a professional
+                        online presence and basic digital tools. If you are an independent person and would like to
+                        support us, you can donate!</p>
                 </div>
             </article>
             <article class="faq">
                 <div class="faq__icon"><i class="uil uil-plus"></i></div>
                 <div class="questionAnswer">
                     <h4>Which countries are eligible?</h4>
-                    <p>We accept applications from schools worldwide. In some cases we may need to comply with local laws, sanctions, or contractual restrictions; if so, we will inform applicants during review. Our primary considerations are the school's educational purpose and the ability to communicate with an authorized contact. If you're unsure about eligibility in your country, reach out to <a href="mailto:contact@smzedu.com">contact@smzedu.com</a> and we'll provide guidance.</p>
+                    <p>We accept applications from schools worldwide. In some cases we may need to comply with local
+                        laws, sanctions, or contractual restrictions; if so, we will inform applicants during review.
+                        Our primary considerations are the school's educational purpose and the ability to communicate
+                        with an authorized contact. If you're unsure about eligibility in your country, reach out to <a
+                            href="mailto:contact@smzedu.com">contact@smzedu.com</a> and we'll provide guidance.</p>
                 </div>
             </article>
             <article class="faq">
                 <div class="faq__icon"><i class="uil uil-plus"></i></div>
                 <div class="questionAnswer">
                     <h4>How can I share SMZ Education?</h4>
-                    <p>Sharing our work helps us grow. You can: share your school's SMZ Education site link on social media; write a short testimonial or case study we can feature; introduce other schools or local organisations that might benefit; and support us by donating or spreading our fundraising links. For partnerships, guest posts, or social campaigns, email <a href="mailto:contact@smzedu.com">contact@smzedu.com</a> and we'll coordinate.</p>
+                    <p>Sharing our work helps us grow. You can: share your school's SMZ Education site link on social
+                        media; write a short testimonial or case study we can feature; introduce other schools or local
+                        organisations that might benefit; and support us by donating or spreading our fundraising links.
+                        For partnerships, guest posts, or social campaigns, email <a
+                            href="mailto:contact@smzedu.com">contact@smzedu.com</a> and we'll coordinate.</p>
                 </div>
             </article>
 
         </div>
     </section>
     <!--end of faqs-->
+
+    <!--start of accreditations-->
+    <section class="accreditations">
+        <div class="container accreditations__container">
+            <h2>Our Partners & Supporters</h2>
+            <p class="accreditations__subtitle">Proudly supported by leading organizations committed to global education
+            </p>
+            <div class="accreditations__grid">
+                <div class="accreditation__item">
+                    <img src="/images/wango.png" alt="WANGO Member"
+                        title="WANGO - World Association of Non-Governmental Organizations Accredited Member">
+                    <p>WANGO Accredited Non-Profit</p>
+                </div>
+                <div class="accreditation__item">
+                    <img src="/images/erdf.png" alt="European Regional Development Fund" title="Supported by ERDF">
+                    <p>ERDF</p>
+                </div>
+                <div class="accreditation__item">
+                    <img src="/images/ghana.png" alt="Ghana Ministry of Education" title="Ghana Ministry of Education">
+                    <p>Ghana Ministry of Education</p>
+                </div>
+                <div class="accreditation__item">
+                    <img src="https://www.bmz.de/resource/image/91696/2x1/1920/960/92141f3d346b288c12ddb8bd2f54dbec/44CEB47E6F12A8927B827D226F3C76B3/logo-bmz-en.jpg"
+                        alt="German Ministry of Economic Cooperation of Development"
+                        title="Supported by German Ministry of Economic Cooperation of Development">
+                    <p>German Ministry of Development</p>
+                </div>
+                <div class="accreditation__item">
+                    <img src="/images/FEDERAL.png" alt="German Federal Government" title="German Federal Government">
+                    <p>German Federal Government</p>
+                </div>
+                <div class="accreditation__item">
+                    <img src="/images/germancoop.png" alt="German-African Cooperation"
+                        title="German-African Cooperation">
+                    <p>German-African Cooperation</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--end of accreditations-->
 
     <footer class="footer">
         <div class="container footer__container">
@@ -392,134 +473,221 @@
     <script src="/general/vanilla-tilt.js"></script>
     <script src="/general/main.js"></script>
     <script>
-        var latitudeInitial = 14.349319;
-        var longitudeInitial = -3.653342;
-        var initialZoom = 5;
-        var schools = [
-            {
-                name: "SMZ Education Headquarters",
-                location: [52.450822, 13.273018],
-                imageUrl: "/images/SMZ_LOGO__3_-removebg-preview.png",
-                address: "Saargemünder Straße 30, Berlin",
-                description: "smzedu.com",
-                contact: "Phone: +49 15224407028"
-            },
-            {
-                name: "École Bilingue Shiloh Académie",
-                location: [14.471422, -16.998958],
-                imageUrl: "/images/SMZ_LOGO__3_-removebg-preview.png",
-                address: "F2C2+GCH, Gandigal-Est, Senegal",
-                description: "shilohacademie.smzedu.com",
-                contact: "Phone: +221 339355619"
-            },
+        // Wait for Leaflet to load before initializing maps
+        function initializeMaps() {
+            var schools = [
+                {
+                    name: "SMZ Education Headquarters",
+                    location: [52.450822, 13.273018],
+                    imageUrl: "/images/SMZ_LOGO__3_-removebg-preview.png",
+                    address: "Saargemünder Straße 30, Berlin",
+                    description: "smzedu.com",
+                    contact: "Phone: +49 15224407028",
+                    region: "europe"
+                },
+                {
+                    name: "École Bilingue Shiloh Académie",
+                    location: [14.471422, -16.998958],
+                    imageUrl: "/images/SMZ_LOGO__3_-removebg-preview.png",
+                    address: "F2C2+GCH, Gandigal-Est, Senegal",
+                    description: "shilohacademie.smzedu.com",
+                    contact: "Phone: +221 339355619",
+                    region: "west-africa"
+                },
+                {
+                    name: "École EVA Dakar",
+                    location: [14.669508, -17.431205],
+                    imageUrl: "/images/SMZ_LOGO__3_-removebg-preview.png",
+                    address: "93 Rue Amadou Assane Ndoye, Dakar, Senegal",
+                    description: "evaschooldakar.smzedu.com",
+                    contact: "Phone: +221 172658892",
+                    region: "west-africa"
+                },
+                {
+                    name: "Serekunda Lower Basic School",
+                    location: [13.433927, -16.678770],
+                    imageUrl: "/images/SMZ_LOGO__3_-removebg-preview.png",
+                    address: "Serrekunda Lower Basic School, Serrekunda, The Gambia",
+                    description: "Website in progress...",
+                    contact: "Phone: +216 50481387",
+                    region: "west-africa"
+                },
+                {
+                    name: "St. K Michael's School",
+                    location: [5.613572, -0.250042],
+                    imageUrl: "/images/SMZ_LOGO__3_-removebg-preview.png",
+                    address: "Nii Okaiman Ave, Accra, Ghana",
+                    description: "st-k-michaels-school.smzedu.com",
+                    contact: "Phone: +233 302416431",
+                    region: "ghana"
+                },
+                {
+                    name: "Rosda School",
+                    location: [5.532382, -0.258736],
+                    imageUrl: "/images/SMZ_LOGO__3_-removebg-preview.png",
+                    address: "Kaashimi St, Accra, Ghana",
+                    description: "rosdaschool.smzedu.com",
+                    contact: "Phone: +233 248530578",
+                    region: "ghana"
+                },
+                {
+                    name: "Winterville Rangers Montessori School",
+                    location: [5.531508, -0.246040],
+                    imageUrl: "/images/SMZ_LOGO__3_-removebg-preview.png",
+                    address: "38 Appiah St, Accra, Ghana",
+                    description: "winterville-rangers-montessori.smzedu.com",
+                    contact: "Phone: +233 542185093",
+                    region: "ghana"
+                },
+                {
+                    name: "Greater Accra Regional Daycare Centres Association (GARDCCA)",
+                    location: [5.614818, -0.205874],
+                    imageUrl: "/images/SMZ_LOGO__3_-removebg-preview.png",
+                    address: "Accra, Ghana",
+                    description: "gardcca.smzedu.com",
+                    contact: "Phone: +233 542185093",
+                    region: "ghana"
+                },
+                {
+                    name: "Decent Learning Academy",
+                    location: [5.684299, -0.071366],
+                    imageUrl: "/images/SMZ_LOGO__3_-removebg-preview.png",
+                    address: "35 Djanie Ashie Rd, Accra, Ghana",
+                    description: "Website in progress...",
+                    contact: "Phone: +233 542185093",
+                    region: "ghana"
+                },
+                {
+                    name: "Legacyfield Montessori School",
+                    location: [5.615, -0.210],
+                    imageUrl: "/images/SMZ_LOGO__3_-removebg-preview.png",
+                    address: "Accra, Ghana",
+                    description: "Website in progress...",
+                    contact: "Phone: +233 542185093",
+                    region: "ghana"
+                },
+                {
+                    name: "Greenland International School",
+                    location: [5.620, -0.195],
+                    imageUrl: "/images/SMZ_LOGO__3_-removebg-preview.png",
+                    address: "Accra, Ghana",
+                    description: "Website in progress...",
+                    contact: "Phone: +233 542185093",
+                    region: "ghana"
+                },
+                {
+                    name: "God's Field Montessori School",
+                    location: [5.608, -0.220],
+                    imageUrl: "/images/SMZ_LOGO__3_-removebg-preview.png",
+                    address: "Accra, Ghana",
+                    description: "Website in progress...",
+                    contact: "Phone: +233 542185093",
+                    region: "ghana"
+                },
+                {
+                    name: "Zamsa Academy",
+                    location: [5.625, -0.205],
+                    imageUrl: "/images/SMZ_LOGO__3_-removebg-preview.png",
+                    address: "Accra, Ghana",
+                    description: "Website in progress...",
+                    contact: "Phone: +233 542185093",
+                    region: "ghana"
+                }
+            ];
 
-            {
-                name: "École EVA Dakar",
-                location: [14.669508, -17.431205],
-                imageUrl: "/images/SMZ_LOGO__3_-removebg-preview.png",
-                address: "93 Rue Amadou Assane Ndoye, Dakar, Senegal",
-                description: "evaschooldakar.smzedu.com",
-                contact: "Phone: +221 172658892"
-            },
+            // Filter schools by region
+            var westAfricaSchools = schools.filter(school => school.region === "west-africa");
+            var ghanaSchools = schools.filter(school => school.region === "ghana");
 
-            {
-                name: "Serekunda Lower Basic School",
-                location: [13.433927, -16.678770],
-                imageUrl: "/images/SMZ_LOGO__3_-removebg-preview.png",
-                address: "Serrekunda Lower Basic School, Serrekunda, The Gambia",
-                description: "Website in progress...",
-                contact: "Phone: +216 50481387"
-            },
+            // Update counts
+            document.getElementById('west-africa-count').textContent = westAfricaSchools.length;
+            document.getElementById('ghana-count').textContent = ghanaSchools.length;
+            document.getElementById('total-schools-count').textContent = westAfricaSchools.length + ghanaSchools.length;
 
-            {
-                name: "St. K Michael's School",
-                location: [5.613572, -0.250042],
-                imageUrl: "/images/SMZ_LOGO__3_-removebg-preview.png",
-                address: "Nii Okaiman Ave, Accra, Ghana",
-                description: "st-k-michaels-school.smzedu.com",
-                contact: "Phone: +233 302416431"
-            },
-            {
-                name: "Rosda School",
-                location: [5.532382, -0.258736],
-                imageUrl: "/images/SMZ_LOGO__3_-removebg-preview.png",
-                address: "Kaashimi St, Accra, Ghana",
-                description: "rosdaschool.smzedu.com",
-                contact: "Phone: +233 248530578"
-            },
-            {
-                name: "Winterville Rangers Montessori School",
-                location: [5.531508, -0.246040],
-                imageUrl: "/images/SMZ_LOGO__3_-removebg-preview.png",
-                address: "38 Appiah St, Accra, Ghana",
-                description: "Website in progress...",
-                contact: "Phone: +233 542185093"
-            },
-            {
-                name: "Greater Accra Regional Daycare Centres Association (GARDCCA)",
-                location: [5.614818, -0.205874],
-                imageUrl: "/images/SMZ_LOGO__3_-removebg-preview.png",
-                address: "Accra, Ghana",
-                description: "gardcca.smzedu.com",
-                contact: "Phone: +233 542185093"
-            },
-            {
-                name: "Decent Learning Academy",
-                location: [5.684299, -0.071366],
-                imageUrl: "/images/SMZ_LOGO__3_-removebg-preview.png",
-                address: "35 Djanie Ashie Rd, Accra, Ghana",
-                description: "Website in progress...",
-                contact: "Phone: +233 542185093"
+            // Create custom icon function
+            function createCustomIcon() {
+                return L.divIcon({
+                    className: 'custom-icon',
+                    html: '<img src="/images/SMZ_LOGO__3_-removebg-preview.png" alt="School Logo">',
+                    iconSize: [38, 38],
+                    iconAnchor: [19, 19],
+                    popupAnchor: [0, -19]
+                });
             }
-        ];
-        document.getElementById('school-count').textContent = schools.length - 1;
 
-        var map = L.map('map', {
-            center: [latitudeInitial, longitudeInitial],
-            zoom: initialZoom,
-            attributionControl: false
-        });
+            // Create popup content function
+            function createPopupContent(school) {
+                return `
+                <div class="popup-content">
+                    <h3>${school.name}</h3>
+                    <p><strong>Address:</strong> ${school.address}</p>
+                </div>
+            `;
+            }
 
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: 'Map data &copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
-
-        // Add markers with improved popup behavior
-        schools.forEach(function (school) {
-            var customIcon = L.divIcon({
-                className: 'custom-icon',
-                html: '<img src="/images/SMZ_LOGO__3_-removebg-preview.png" alt="School Logo">',
-                iconSize: [38, 38],
-                iconAnchor: [19, 19],
-                popupAnchor: [0, -19]
+            // Initialize West Africa Map
+            var mapWestAfrica = L.map('map-west-africa', {
+                center: [14.0, -16.5],
+                zoom: 7,
+                attributionControl: false
             });
 
-            var popupContent = `
-        <div class="popup-content">
-            <h3>${school.name}</h3>
-            <p><strong>Address:</strong> ${school.address}</p>
-        </div>
-    `;
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: 'Map data &copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(mapWestAfrica);
 
-            L.marker(school.location, { icon: customIcon })
-                .bindPopup(popupContent, {
-                    autoPan: true,
-                    autoPanPadding: [50, 50] // Prevents excessive panning
-                })
-                .addTo(map);
-        });
+            // Add West Africa markers
+            westAfricaSchools.forEach(function (school) {
+                L.marker(school.location, { icon: createCustomIcon() })
+                    .bindPopup(createPopupContent(school), {
+                        autoPan: true,
+                        autoPanPadding: [50, 50]
+                    })
+                    .addTo(mapWestAfrica);
+            });
 
-        // Delay invalidateSize to fix map rendering issues
-        setTimeout(function () {
-            map.invalidateSize();
-        }, 500);
+            // Initialize Ghana Map
+            var mapGhana = L.map('map-ghana', {
+                center: [5.60, -0.21],
+                zoom: 11,
+                attributionControl: false
+            });
 
-        // Ensure proper map rendering on window resize
-        window.addEventListener('resize', function () {
-            map.invalidateSize();
-        });
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: 'Map data &copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(mapGhana);
 
+            // Add Ghana markers
+            ghanaSchools.forEach(function (school) {
+                L.marker(school.location, { icon: createCustomIcon() })
+                    .bindPopup(createPopupContent(school), {
+                        autoPan: true,
+                        autoPanPadding: [50, 50]
+                    })
+                    .addTo(mapGhana);
+            });
+
+            // Delay invalidateSize to fix map rendering issues
+            setTimeout(function () {
+                mapWestAfrica.invalidateSize();
+                mapGhana.invalidateSize();
+            }, 500);
+
+            // Ensure proper map rendering on window resize
+            window.addEventListener('resize', function () {
+                mapWestAfrica.invalidateSize();
+                mapGhana.invalidateSize();
+            });
+        }
+
+        // Initialize maps when Leaflet is loaded
+        if (typeof L !== 'undefined') {
+            initializeMaps();
+        } else {
+            window.addEventListener('load', initializeMaps);
+        }
     </script>
+    <script src="/general/gdpr-consent.js"></script>
 
 </body>
 

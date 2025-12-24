@@ -3,7 +3,7 @@
 ![smz edu homepage](https://github.com/user-attachments/assets/377040ab-7013-4bc6-a4c5-40582ff09d6c)
 SMZ Education Website: https://smzedu.com/home/
 
-**Empowering over 8500+ students across 8+ schools in 3 countries through free technology and digital infrastructure.**
+**Empowering over 13000+ students across 8+ schools in 3 countries through free technology and digital infrastructure.**
 
 SMZ Education is a non-profit initiative that provides free website development, email services, and digital infrastructure to schools worldwide. Since our founding in May 2024, we've partnered with educational institutions across West Africa and beyond, creating professional online presences and digital tools that enhance educational opportunities regardless of economic circumstances.
 
@@ -42,7 +42,7 @@ We run on the generous donations of individuals and organizations who share our 
 ## Impact & Statistics
 
 - **8+ Websites** developed and maintained for educational institutions
-- **8500+ Students** impacted across our partner schools
+- **13,000+ Students** impacted across our partner schools
 - **180+ Email & Cloud Accounts** created and managed
 - **3 Countries** with active partnerships (Senegal, Ghana, The Gambia)
 - **100% Free** - All core services provided at no cost to schools
