@@ -37,19 +37,16 @@ const navbar = document.querySelector("nav");
 window.addEventListener("load", () => {
   navbar.style.top = "3.1rem";
 
-  // Detect if the page was truly reloaded (e.g. F5, Ctrl+R)
-  const navEntry = performance.getEntriesByType("navigation")[0];
-  const navigationType = navEntry && navEntry.type ? navEntry.type : "";
+  // Only show popup once per session unless user manually reloads
+  const popupShownThisSession = sessionStorage.getItem("donationPopupShown");
+  const popupPermanentlyClosed = localStorage.getItem("donationPopupClosed");
 
-  // If it was a forced reload, remove the "closed" flag.
-  // This allows the popup to appear again even if it was previously closed.
-  if (navigationType === "reload") {
-    localStorage.removeItem("donationPopupClosed");
-  }
-
-  // If popup was never closed, schedule it to appear after 3 minutes
-  if (localStorage.getItem("donationPopupClosed") !== "true") {
-    setTimeout(showDonationPopup, 180000); // 3 minutes
+  // If popup was never closed permanently and hasn't been shown this session
+  if (popupPermanentlyClosed !== "true" && popupShownThisSession !== "true") {
+    setTimeout(() => {
+      showDonationPopup();
+      sessionStorage.setItem("donationPopupShown", "true");
+    }, 180000); // 3 minutes
   }
 });
 
@@ -106,3 +103,101 @@ if (closeBtnElement) {
     }
   });
 }
+
+// Mission Carousel Functionality
+document.addEventListener("DOMContentLoaded", () => {
+  const track = document.querySelector(".carousel-track");
+  const items = document.querySelectorAll(".carousel-item");
+  const prevBtn = document.querySelector(".carousel-btn.prev");
+  const nextBtn = document.querySelector(".carousel-btn.next");
+  const dots = document.querySelectorAll(".dot");
+
+  // Exit if carousel elements don't exist on this page
+  if (!track || items.length === 0) return;
+
+  let currentSlide = 0;
+  const totalSlides = items.length;
+
+  // Auto-advance interval (every 6 seconds)
+  let autoAdvanceInterval;
+
+  function goToSlide(slideIndex) {
+    // Remove active class from all items
+    items.forEach((item) => item.classList.remove("active"));
+    dots.forEach((dot) => dot.classList.remove("active"));
+
+    // Add active class to current item
+    items[slideIndex].classList.add("active");
+    dots[slideIndex].classList.add("active");
+
+    currentSlide = slideIndex;
+  }
+
+  function nextSlide() {
+    const next = (currentSlide + 1) % totalSlides;
+    goToSlide(next);
+  }
+
+  function prevSlide() {
+    const prev = (currentSlide - 1 + totalSlides) % totalSlides;
+    goToSlide(prev);
+  }
+
+  function startAutoAdvance() {
+    autoAdvanceInterval = setInterval(nextSlide, 6000);
+  }
+
+  function stopAutoAdvance() {
+    clearInterval(autoAdvanceInterval);
+  }
+
+  // Event listeners for buttons
+  if (nextBtn) {
+    nextBtn.addEventListener("click", () => {
+      nextSlide();
+      stopAutoAdvance();
+      startAutoAdvance(); // Restart auto-advance after manual interaction
+    });
+  }
+
+  if (prevBtn) {
+    prevBtn.addEventListener("click", () => {
+      prevSlide();
+      stopAutoAdvance();
+      startAutoAdvance();
+    });
+  }
+
+  // Event listeners for dots
+  dots.forEach((dot, index) => {
+    dot.addEventListener("click", () => {
+      goToSlide(index);
+      stopAutoAdvance();
+      startAutoAdvance();
+    });
+  });
+
+  // Keyboard navigation
+  document.addEventListener("keydown", (e) => {
+    if (!track) return;
+
+    if (e.key === "ArrowLeft") {
+      prevSlide();
+      stopAutoAdvance();
+      startAutoAdvance();
+    } else if (e.key === "ArrowRight") {
+      nextSlide();
+      stopAutoAdvance();
+      startAutoAdvance();
+    }
+  });
+
+  // Pause auto-advance on hover
+  if (track.parentElement) {
+    track.parentElement.addEventListener("mouseenter", stopAutoAdvance);
+    track.parentElement.addEventListener("mouseleave", startAutoAdvance);
+  }
+
+  // Start auto-advance
+  startAutoAdvance();
+});
