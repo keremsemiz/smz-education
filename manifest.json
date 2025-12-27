@@ -1,0 +1,31 @@
+{
+  "name": "SMZ Education",
+  "short_name": "SMZ EDU",
+  "description": "Free technology and website development for schools worldwide",
+  "start_url": "/home/",
+  "display": "standalone",
+  "background_color": "#011D3B",
+  "theme_color": "#353B80",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/images/SMZ_LOGO__3_-removebg-preview.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/SMZ_LOGO__3_-removebg-preview.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": [
+    "education",
+    "non-profit",
+    "technology"
+  ],
+  "lang": "en-US",
+  "dir": "ltr"
+}
