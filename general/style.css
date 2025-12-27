@@ -945,7 +945,7 @@ header {
 }
 
 .total-schools-summary h2 span {
-  color: var(--color-primary);
+  color: var(--color-white);
   font-weight: 700;
   font-size: 1.9rem;
 }
@@ -1366,12 +1366,11 @@ header {
 }
 
 .sdg-overview .btn {
-  display: inline-block;
+  display: block;
   margin: 0 auto;
   text-align: center;
   font-size: 1.05rem;
   padding: 1.2rem 2.5rem;
-  display: block;
   width: fit-content;
 }
 
