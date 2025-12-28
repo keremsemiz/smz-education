@@ -7,6 +7,11 @@
   box-sizing: border-box;
 }
 
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
 :root {
   --color-primary: #353b80;
   --color-success: #00bf8e;
@@ -33,6 +38,10 @@ body {
   line-height: 1.7;
   color: var(--color-white);
   background-image: url(https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
 .container {
@@ -516,6 +525,7 @@ header {
   background: var(--color-bg1);
   padding: 4rem 0 1.5rem;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
+  margin-top: auto;
 }
 
 .footer__container {
