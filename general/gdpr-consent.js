@@ -137,35 +137,35 @@
                         <div class="cookie-types">
                             <div class="cookie-type">
                                 <div class="cookie-type-header">
-                                    <h4>Essential Cookies</h4>
-                                    <label class="cookie-toggle">
-                                        <input type="checkbox" id="essential-cookies" checked disabled>
+                                    <h4 id="essential-cookies-label">Essential Cookies</h4>
+                                    <label class="cookie-toggle" for="essential-cookies" aria-labelledby="essential-cookies-label">
+                                        <input type="checkbox" id="essential-cookies" checked disabled aria-describedby="essential-cookies-desc">
                                         <span class="cookie-toggle-slider"></span>
                                     </label>
                                 </div>
-                                <p class="cookie-type-description">Required for the website to function properly. These cannot be disabled. Essential cookies ensure basic functionalities and security features of the website which are allowed under European Union law No. 2016/679 (GDPR).</p>
+                                <p id="essential-cookies-desc" class="cookie-type-description">Required for the website to function properly. These cannot be disabled. Essential cookies ensure basic functionalities and security features of the website which are allowed under European Union law No. 2016/679 (GDPR).</p>
                             </div>
                             
                             <div class="cookie-type">
                                 <div class="cookie-type-header">
-                                    <h4>Analytics Cookies</h4>
-                                    <label class="cookie-toggle">
-                                        <input type="checkbox" id="analytics-cookies" checked>
+                                    <h4 id="analytics-cookies-label">Analytics Cookies</h4>
+                                    <label class="cookie-toggle" for="analytics-cookies" aria-labelledby="analytics-cookies-label">
+                                        <input type="checkbox" id="analytics-cookies" checked aria-describedby="analytics-cookies-desc">
                                         <span class="cookie-toggle-slider"></span>
                                     </label>
                                 </div>
-                                <p class="cookie-type-description">Help us understand how visitors interact with our website (Google Analytics, Search Console). This information is purely anonymous and cannot be used to identify you. Device Information and Log Data may be collected for this purpose and are deleted after a short period entailing two weeks.</p>
+                                <p id="analytics-cookies-desc" class="cookie-type-description">Help us understand how visitors interact with our website (Google Analytics, Search Console). This information is purely anonymous and cannot be used to identify you. Device Information and Log Data may be collected for this purpose and are deleted after a short period entailing two weeks.</p>
                             </div>
                             
                             <div class="cookie-type">
                                 <div class="cookie-type-header">
-                                    <h4>Advertising Cookies</h4>
-                                    <label class="cookie-toggle">
-                                        <input type="checkbox" id="advertising-cookies" checked>
+                                    <h4 id="advertising-cookies-label">Advertising Cookies</h4>
+                                    <label class="cookie-toggle" for="advertising-cookies" aria-labelledby="advertising-cookies-label">
+                                        <input type="checkbox" id="advertising-cookies" checked aria-describedby="advertising-cookies-desc">
                                         <span class="cookie-toggle-slider"></span>
                                     </label>
                                 </div>
-                                <p class="cookie-type-description">Used to display relevant advertisements (Google AdSense) and other third-party advertising partners (GoFundMe). This information aids us in donations and is used to improve our advertising and outreach efforts.</p>
+                                <p id="advertising-cookies-desc" class="cookie-type-description">Used to display relevant advertisements (Google AdSense) and other third-party advertising partners (GoFundMe). This information aids us in donations and is used to improve our advertising and outreach efforts.</p>
                             </div>
                         </div>
                         
