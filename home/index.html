@@ -56,9 +56,6 @@
     <link rel="preload" href="/general/style.css" as="style">
     <link rel="stylesheet" href="/general/style.css">
 
-    <!-- Preload LCP image -->
-    <link rel="preload" as="image" href="/images/SMZ_LOGO__3_-removebg-preview.webp" fetchpriority="high">
-
     <!-- DNS Prefetch and Preconnect for performance -->
     <link rel="dns-prefetch" href="https://www.gofundme.com">
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
@@ -173,9 +170,7 @@
                 <a class="btn btn-primary" href="/projects/" aria-label="Explore our projects">Explore</a>
             </div>
             <div class="header__right">
-                <img src="/images/SMZ_LOGO__3_-removebg-preview.webp"
-                    alt="SMZ Education Logo - Bringing Technology to Schools Worldwide" width="500" height="500"
-                    fetchpriority="high" decoding="async">
+                <!-- Add relevant image here -->
             </div>
         </div>
     </header>
@@ -196,7 +191,7 @@
                 <div class="categories__tilt" data-tilt>
                     <article class="category">
                         <span class="category__icon"><i class="uil uil-code-branch"></i></span>
-                        <h3>Website</h3>
+                        <h5>Website</h5>
                         <p>SMZ Education provides your school with a free website that goes by the domain
                             "yourschool".smzedu.com. This domain gives your school a professional website with all the
                             features you need.</p>
@@ -205,7 +200,7 @@
                 <div class="categories__tilt" data-tilt>
                     <article class="category">
                         <span class="category__icon"><i class="uil uil-backpack"></i></span>
-                        <h3>E-Mail</h3>
+                        <h5>E-Mail</h5>
                         <p>SMZ Education makes email addresses available to your school that go along:
                             "yourschool"@smzedu.com. We modify as many emails as your school needs for you and your
                             colleagues.</p>
@@ -214,7 +209,7 @@
                 <div class="categories__tilt" data-tilt>
                     <article class="category category__help">
                         <span class="category__icon"><i class="uil uil-question-circle"></i></span>
-                        <h3>Help</h3>
+                        <h5>Help</h5>
                         <p>SMZ Education hosts all the websites on our side, meaning you don't have any hassle! If you
                             want to modify parts of your website; you can contact us at <a
                                 href="mailto:support@smzedu.com">support@smzedu.com</a>.</p>
@@ -238,7 +233,7 @@
                     <div class="course__image">
                         <img style="height: 16rem;" src="/images/zamsa.webp"
                             alt="Zamsa Academy - Private school in Accra, Ghana partnered with SMZ Education"
-                            width="335" height="256" decoding="async">
+                            width="335" height="256" loading="lazy" decoding="async">
                     </div>
                     <div class="course__text">
                         <h3>Partnership with Zamsa Academy</h3>
@@ -263,7 +258,7 @@
                     <div class="course__image">
                         <img style="height: 16rem;" src="/images/godsfield.webp"
                             alt="God's Field Montessori School - Montessori education in Accra, Ghana" width="335"
-                            height="256" decoding="async">
+                            height="256" loading="lazy" decoding="async">
                     </div>
                     <div class="course__text">
                         <h3>Partnership with God's Field Montessori School</h3>
@@ -312,7 +307,7 @@
         <h1>Our Project Map</h1>
         <div class="maps-container">
             <div class="map-wrapper">
-                <h2>West Africa Region</h2>
+                <h3>West Africa Region</h3>
                 <div id="map-west-africa" class="map">
                     <div class="total-schools">
                         <h4>West Africa Schools:</h4>
@@ -321,7 +316,7 @@
                 </div>
             </div>
             <div class="map-wrapper">
-                <h2>Ghana (Accra)</h2>
+                <h3>Ghana (Accra)</h3>
                 <div id="map-ghana" class="map">
                     <div class="total-schools">
                         <h4>Ghana Schools:</h4>
@@ -474,7 +469,7 @@
             <article class="faq">
                 <div class="faq__icon"><i class="uil uil-plus"></i></div>
                 <div class="questionAnswer">
-                    <h3>Do we need to pay anything?</h3>
+                    <h4>Do we need to pay anything?</h4>
                     <p>No — the core services provided by SMZ Education (website creation, basic hosting, Google Maps
                         entries and school email setup) are offered free of charge to eligible schools. We rely on
                         donations and volunteers to cover hosting, maintenance, and development costs. Donations are
@@ -487,7 +482,7 @@
             <article class="faq">
                 <div class="faq__icon"><i class="uil uil-plus"></i></div>
                 <div class="questionAnswer">
-                    <h3>What are the requirements?</h3>
+                    <h4>What are the requirements?</h4>
                     <p>To apply, you should represent an educational institution (school, preschool, learning centre,
                         etc.). We ask for basic information such as the school's name, location, an authorized contact
                         person, and proof of affiliation (for example an official email or document) where applicable.
@@ -500,7 +495,7 @@
             <article class="faq">
                 <div class="faq__icon"><i class="uil uil-plus"></i></div>
                 <div class="questionAnswer">
-                    <h3>How do I un-enroll?</h3>
+                    <h4>How do I un-enroll?</h4>
                     <p>If you decide to stop using our services, please email <a
                             href="mailto:support@smzedu.com">support@smzedu.com</a> with your school name, domain (if
                         assigned), and a brief reason for un-enrolling. We'll confirm the account ownership, provide a
@@ -526,7 +521,7 @@
             <article class="faq">
                 <div class="faq__icon"><i class="uil uil-plus"></i></div>
                 <div class="questionAnswer">
-                    <h3>Which countries are eligible?</h3>
+                    <h4>Which countries are eligible?</h4>
                     <p>We accept applications from schools worldwide. In some cases we may need to comply with local
                         laws, sanctions, or contractual restrictions; if so, we will inform applicants during review.
                         Our primary considerations are the school's educational purpose and the ability to communicate
@@ -537,7 +532,7 @@
             <article class="faq">
                 <div class="faq__icon"><i class="uil uil-plus"></i></div>
                 <div class="questionAnswer">
-                    <h3>How can I share SMZ Education?</h3>
+                    <h4>How can I share SMZ Education?</h4>
                     <p>Sharing our work helps us grow. You can: share your school's SMZ Education site link on social
                         media; write a short testimonial or case study we can feature; introduce other schools or local
                         organisations that might benefit; and support us by donating or spreading our fundraising links.
