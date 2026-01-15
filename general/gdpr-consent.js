@@ -132,7 +132,7 @@
                     </div>
                     
                     <div class="cookie-consent-body">
-                        <p>We, SMZ Education gUG, use cookies to enhance your browsing experience and analyze our traffic. By clicking "Accept All", you consent to our use of cookies. You can manage your preferences or learn more in our <a href="/privacy/">Privacy Policy</a> and <a href="/cookies/">Cookie Policy</a>.</p>
+                        <p>We, SMZ Education gemeinnützige UG (haftungsbeschränkt), use cookies to enhance your browsing experience and analyze our traffic. By clicking "Accept All", you consent to our use of cookies. You can manage your preferences or learn more in our <a href="/privacy/">Privacy Policy</a> and <a href="/cookies/">Cookie Policy</a>.</p>
                         
                         <div class="cookie-types">
                             <div class="cookie-type">
