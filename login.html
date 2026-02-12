@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - SMZ Education E-Classroom</title>
+    <meta name="description" content="Access your SMZ Education E-Classroom account. Login to manage courses, assignments, and connect with your school community.">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="icon" href="/images/SMZ_LOGO__3_-removebg-preview.webp" type="image/webp">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --color-primary: #353B80;
+            --color-primary-dark: #2a2f66;
+            --color-primary-light: #4a51a0;
+            --color-white: #ffffff;
+            --color-gray-light: #f5f6fa;
+            --color-gray: #dcdde1;
+            --color-gray-dark: #57606f;
+            --color-danger: #ee5a6f;
+            --color-success: #00d09c;
+            --transition: all 300ms ease;
+        }
+
+        body {
+            font-family: 'Archivo', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem 2rem;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            top: -250px;
+            right: -250px;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        body::after {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+            bottom: -200px;
+            left: -200px;
+            animation: float 8s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(20px);
+            }
+        }
+
+        .login-container {
+            background: var(--color-white);
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 450px;
+            width: 100%;
+            padding: 2.5rem 3rem 1.75rem 3rem;
+            position: relative;
+            z-index: 1;
+            animation: slideUp 0.5s ease-out;
+            margin: auto;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .logo-container {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .logo-container img {
+            width: 250px;
+            height: auto;
+            margin-bottom: 0.75rem;
+        }
+
+        .logo-container h1 {
+            color: var(--color-primary);
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .logo-container p {
+            color: var(--color-gray-dark);
+            font-size: 0.95rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+
+        .form-group label {
+            display: block;
+            color: var(--color-primary);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 0.875rem 1rem;
+            border: 2px solid var(--color-gray);
+            border-radius: 10px;
+            font-size: 1rem;
+            font-family: 'Archivo', sans-serif;
+            transition: var(--transition);
+            background: var(--color-white);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--color-primary);
+            box-shadow: 0 0 0 4px rgba(53, 59, 128, 0.1);
+        }
+
+        .form-group input::placeholder {
+            color: var(--color-gray-dark);
+        }
+
+        .form-group select {
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23353B80' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            background-size: 20px;
+            padding-right: 3rem;
+        }
+
+        .password-container {
+            position: relative;
+        }
+
+        .toggle-password {
+            position: absolute;
+            right: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--color-gray-dark);
+            font-size: 1.2rem;
+            padding: 0.5rem;
+            transition: var(--transition);
+        }
+
+        .toggle-password:hover {
+            color: var(--color-primary);
+        }
+
+        .remember-forgot {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.25rem;
+            font-size: 0.9rem;
+        }
+
+        .remember-me {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+        }
+
+        .remember-me input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+            accent-color: var(--color-primary);
+        }
+
+        .remember-me label {
+            color: var(--color-gray-dark);
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .forgot-password {
+            color: var(--color-primary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .forgot-password:hover {
+            color: var(--color-primary-dark);
+        }
+
+        .btn-login {
+            width: 100%;
+            padding: 1rem;
+            background: var(--color-primary);
+            color: var(--color-white);
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 12px rgba(53, 59, 128, 0.3);
+        }
+
+        .btn-login:hover {
+            background: var(--color-primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(53, 59, 128, 0.4);
+        }
+
+        .btn-login:active {
+            transform: translateY(0);
+        }
+
+        .signup-link {
+            text-align: center;
+            color: var(--color-gray-dark);
+            font-size: 0.9rem;
+            margin-bottom: 0;
+        }
+
+        .signup-link a {
+            color: var(--color-primary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .signup-link a:hover {
+            color: var(--color-primary-dark);
+        }
+
+        .back-home {
+            text-align: center;
+            margin-top: 0.75rem;
+            padding-top: 0.75rem;
+            border-top: 1px solid var(--color-gray);
+        }
+
+        .back-home a {
+            color: var(--color-gray-dark);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .back-home a:hover {
+            color: var(--color-primary);
+        }
+
+        .error-message {
+            background: #ffe6e6;
+            color: var(--color-danger);
+            padding: 0.875rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            display: none;
+            border-left: 4px solid var(--color-danger);
+        }
+
+        .error-message.show {
+            display: block;
+            animation: shake 0.5s ease-in-out;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-10px); }
+            75% { transform: translateX(10px); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .login-container {
+                padding: 2rem 1.5rem;
+            }
+
+            .logo-container h1 {
+                font-size: 1.5rem;
+            }
+
+            .logo-container p {
+                font-size: 0.85rem;
+            }
+
+            .logo-container img {
+                width: 200px;
+            }
+
+            body {
+                padding: 1rem;
+            }
+        }
+
+        /* Loading State */
+        .btn-login.loading {
+            pointer-events: none;
+            opacity: 0.7;
+            position: relative;
+        }
+
+        .btn-login.loading::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            top: 50%;
+            left: 50%;
+            margin-left: -10px;
+            margin-top: -10px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: spinner 0.6s linear infinite;
+        }
+
+        @keyframes spinner {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-container">
+        <div class="logo-container">
+            <img src="/images/smz-eclassroom.png" alt="SMZ Education Logo">
+            <h1>E-Classroom</h1>
+            <p>SMZ Education's Free Digital School Management and Lesson Platform</p>
+        </div>
+
+        <div class="error-message" id="errorMessage">
+            Invalid credentials. Please try again.
+        </div>
+
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="school">Select Your School</label>
+                <select id="school" name="school" required>
+                    <option value="">Choose your school...</option>
+                    <optgroup label="New Partnerships - February 2026">
+                        <option value="marina-nursery">Marina Nursery School & Kindergarten</option>
+                        <option value="great-stars-montessori">Great Stars Montessori School</option>
+                        <option value="young-christian">Young Christian International School</option>
+                        <option value="glorious-prince">Glorious Prince Academy</option>
+                        <option value="theobeth-grandee">Theobeth Grandee School</option>
+                        <option value="natbek">Natbek School</option>
+                        <option value="virgins-preparatory">Virgins Preparatory School</option>
+                        <option value="zion-academy">Zion Academy</option>
+                        <option value="arose-academy">Arose Academy</option>
+                        <option value="prime-will">Prime Will Academy</option>
+                        <option value="victory-kids">Victory Kids Complex</option>
+                        <option value="nole-royals">Nole Royals International School</option>
+                        <option value="apostolic-church">Apostolic Church Academy</option>
+                        <option value="joeracle">Joeracle Preparatory School</option>
+                        <option value="st-thomas-g4">St Thomas G4 International School</option>
+                        <option value="lizzy-montessori">Lizzy Montessori</option>
+                        <option value="daniel-vision">Daniel Vision School</option>
+                    </optgroup>
+                    <optgroup label="Recent Partnerships - January 2026">
+                        <option value="zamsa-academy">Zamsa Academy</option>
+                        <option value="ijj-international">I. J. J. International School</option>
+                        <option value="divine-overcomers">Divine Overcomers Academy</option>
+                        <option value="jokese-montessori">Jokese Montessori School</option>
+                        <option value="vision-redeemers">Vision Redeemers Academy</option>
+                        <option value="golden-spring">Golden Spring School</option>
+                        <option value="peace-home">Peace Home Education Centre</option>
+                        <option value="golden-grace">Golden Grace Mercedes School</option>
+                        <option value="heaven-seed">Heaven Seed Academy</option>
+                        <option value="shalom-revival">Shalom Revival Mission School</option>
+                        <option value="rao-royal">Rao Royal Memorial School</option>
+                        <option value="divine-extra">Divine Extra Tuition Academy</option>
+                    </optgroup>
+                    <optgroup label="Established Partnerships - 2025">
+                        <option value="gods-field">God's Field Montessori School</option>
+                        <option value="greenland">Greenland International School</option>
+                        <option value="legacyfield">Legacyfield Montessori School</option>
+                        <option value="gardcca">GARDCCA (Greater Accra Regional Daycare Centres)</option>
+                        <option value="winterville">Winterville Rangers Montessori School</option>
+                        <option value="decent-learning">Decent Learning Academy</option>
+                    </optgroup>
+                    <optgroup label="Founding Partnerships - 2024">
+                        <option value="rosda-school">Rosda School</option>
+                        <option value="st-k-michaels">St. K Michael's School</option>
+                        <option value="eva-dakar">École EVA Dakar (Senegal)</option>
+                        <option value="shiloh-academie">Shiloh Académie (Senegal)</option>
+                    </optgroup>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="username">Username or Email</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username or email" required autocomplete="username">
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <div class="password-container">
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required autocomplete="current-password">
+                    <button type="button" class="toggle-password" id="togglePassword">
+                        👁️
+                    </button>
+                </div>
+            </div>
+
+            <div class="remember-forgot">
+                <div class="remember-me">
+                    <input type="checkbox" id="remember" name="remember">
+                    <label for="remember">Remember me</label>
+                </div>
+                <a href="#" class="forgot-password">Forgot password?</a>
+            </div>
+
+            <button type="submit" class="btn-login">Sign In</button>
+        </form>
+
+        <div class="signup-link">
+            Don't have an account? <a href="/contact/">Contact your school</a>
+        </div>
+
+        <div class="back-home">
+            <a href="/home/">
+                ← Back to SMZ Education
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Toggle password visibility
+        const togglePassword = document.getElementById('togglePassword');
+        const passwordInput = document.getElementById('password');
+        
+        togglePassword.addEventListener('click', function() {
+            const isPassword = passwordInput.getAttribute('type') === 'password';
+            const type = isPassword ? 'text' : 'password';
+            passwordInput.setAttribute('type', type);
+            this.textContent = isPassword ? 'Hide' : 'Show';
+            // Make the toggle text smaller on screen
+            this.style.fontSize = '0.85rem';
+            this.style.lineHeight = '1';
+        });
+
+        // Form submission
+        const loginForm = document.getElementById('loginForm');
+        const errorMessage = document.getElementById('errorMessage');
+        const loginButton = loginForm.querySelector('.btn-login');
+
+        loginForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            // Hide error message
+            errorMessage.classList.remove('show');
+            
+            // Add loading state
+            loginButton.classList.add('loading');
+            loginButton.textContent = '';
+            
+            // Get form values
+            const formData = {
+                school: document.getElementById('school').value,
+                username: document.getElementById('username').value,
+                password: document.getElementById('password').value,
+                remember: document.getElementById('remember').checked
+            };
+
+            // Simulate API call (replace with actual authentication)
+            setTimeout(() => {
+                // Remove loading state
+                loginButton.classList.remove('loading');
+                loginButton.textContent = 'Sign In';
+                
+                // For demo purposes, show error
+                // In production, replace with actual authentication logic
+                errorMessage.textContent = 'Wrong credentials. Please try again.';
+                errorMessage.style.background = '#8B0000';
+                errorMessage.style.color = '#FFFFFF';
+                errorMessage.style.borderLeft = '4px solid #8B0000';
+                errorMessage.classList.add('show');
+                
+                console.log('Login attempt:', formData);
+                
+                // Uncomment for actual implementation:
+                // window.location.href = '/dashboard/';
+            }, 1500);
+        });
+
+        // Auto-hide error message after 5 seconds
+        errorMessage.addEventListener('animationend', function() {
+            setTimeout(() => {
+                if (this.classList.contains('show')) {
+                    this.classList.remove('show');
+                }
+            }, 5000);
+        });
+
+        // Select field focus animation
+        const selectField = document.getElementById('school');
+        selectField.addEventListener('focus', function() {
+            this.style.transform = 'scale(1.01)';
+        });
+        selectField.addEventListener('blur', function() {
+            this.style.transform = 'scale(1)';
+        });
+    </script>
+</body>
+
+</html>
