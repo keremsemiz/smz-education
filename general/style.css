@@ -490,6 +490,69 @@ header {
   font-size: 0.75rem;
 }
 
+.projects-sort-row {
+  width: 95%;
+  max-width: 1600px;
+  margin: -0.5rem auto 1.25rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.projects-sort {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.4rem;
+  color: var(--color-light);
+  background: rgba(2, 16, 43, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 999px;
+  transition: var(--transition);
+}
+
+.projects-sort:hover,
+.projects-sort:focus-within {
+  color: var(--color-white);
+  border-color: rgba(255, 255, 255, 0.32);
+  background: var(--color-bg1);
+}
+
+.projects-sort select {
+  min-width: 7.25rem;
+  padding: 0.5rem 2rem 0.5rem 0.3rem;
+  appearance: none;
+  -webkit-appearance: none;
+  border: 0;
+  background: transparent;
+  color: var(--color-white);
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.projects-sort select:focus-visible {
+  outline: 0;
+}
+
+.projects-sort select option {
+  background: var(--color-bg1);
+  color: var(--color-white);
+}
+
+.projects-sort__icon {
+  margin-left: 0.7rem;
+  font-size: 0.95rem;
+  pointer-events: none;
+}
+
+.projects-sort__chevron {
+  position: absolute;
+  right: 0.6rem;
+  font-size: 0.9rem;
+  pointer-events: none;
+}
+
 /*******************************FAQ***************************/
 
 .faqs {
