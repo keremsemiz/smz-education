@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://smzedu.com/sitemap.xml
