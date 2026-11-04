@@ -44,8 +44,8 @@
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
 
     <!-- Preload critical CSS -->
-    <link rel="preload" href="/general/style.css" as="style">
-    <link rel="stylesheet" href="/general/style.css">
+    <link rel="preload" href="/general/style.css?v=2" as="style">
+    <link rel="stylesheet" href="/general/style.css?v=2">
 
     <!-- Preconnect to external resources -->
     <link rel="preconnect" href="https://unicons.iconscout.com">
@@ -153,7 +153,7 @@
                     <select id="project-sort" name="project-sort" aria-label="Sort projects">
                         <option value="date-desc">Latest</option>
                         <option value="date-asc">Earliest</option>
-                        <option value="completed-first">Completed first</option>
+                        <option selected value="completed-first">Completed first</option>
                         <option value="development-first">In development first</option>
                     </select>
                     <i class="uil uil-angle-down projects-sort__chevron" aria-hidden="true"></i>
@@ -777,7 +777,9 @@
                                 in their students.
                                 Interested in joining the SMZ Education network? Reach out to us at <a
                                     href="mailto:contact@smzedu.com">contact@smzedu.com</a>.</p>
-                            <a class="btn btn-primary">Currently under Development</a>
+                            <a rel="noopener noreferrer" target="_blank"
+                                href="https://www.vision-redeemers-academy.smzedu.com" class="btn btn-primary">Visit
+                                Website!</a>
                         </div>
                     </article>
                 </div>
